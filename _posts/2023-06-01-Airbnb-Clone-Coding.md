@@ -26,7 +26,7 @@ This is Full-stack coding. Building Airbnb service with Django and React. It cov
 
 <br>
 
-#### **<Text style="color:EC6664"> Goal of this project : </Text>**
+#### <Text style="color:EC6664"> Goal of this project : </Text>
 
 The project aims to gain a thorough understanding of implementing a practical service and carefully constructing data for analysis, starting from the service planning phase. It emphasizes the integration of developed models into real services and the exploration of business considerations, going beyond data manipulation.
 
