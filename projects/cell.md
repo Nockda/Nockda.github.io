@@ -1,14 +1,17 @@
 ---
 layout: post
 title: Identification of Different Types of Cell Nuclei in Cancer
-subtitle: Understanding Model Performance and Feature Interpretation using Captum
+subtitle:
+cover-img: /assets/img/cancer_classification/cancer_cover.png
+thumbnail-img: /assets/img/cancer_classification/CancerLogo.png
+share-img: /assets/img/path.jpg
 tags: [deep learning, Maching learning, kaggle, python]
 comments: true
 ---
 
-## <Text>Goal of this project</Text>
+Understanding Model Performance and Feature Interpretation using Captum
 
----
+## <Text style="color:#008080">Goal of this project</Text>
 
 Train two deep neural network which can take images with a cell nuclei and classify it into one of the following types which are shown in the figures above:
 
@@ -23,26 +26,15 @@ Train two deep neural network which can take images with a cell nuclei and class
 
 ![Cell sample](../assets/img/cancer_classification/cell_pic.png)
 
-##### (a) Normal Colon Tissue.
+(a) Normal Colon Tissue.
 
-##### (b) <Text style="color:orange">Orange</Text> = normal / <Text style="color:red">Red</Text> = cancer / <Text style="color:green">Green</Text> = immune cells / <Text style="color:blue">Blue</Text> = connective tissue.
+(b) <Text style="color:orange">Orange</Text> = normal / <Text style="color:red">Red</Text> = cancer / <Text style="color:green">Green</Text> = immune cells / <Text style="color:blue">Blue</Text> = connective tissue.
 
-##### (c) Cancer sample.
+(c) Cancer sample.
 
 <br>
-<div style="text-align:center">
 
-| Color of cell                            | Definition        |
-| :--------------------------------------- | :---------------- |
-| <Text style="color:orange">Orange</Text> | Normal            |
-| <Text style="color:red">Red</Text>       | cancer            |
-| <Text style="color:green">Green</Text>   | immune cells      |
-| <Text style="color:blue">Blue</Text>     | connective tissue |
-
-</div>
-<br>
-
-### Methodology
+### <Text style="color:#008080">Methodology</Text>
 
 I employed two models in my study:
 
@@ -53,7 +45,7 @@ I employed two models in my study:
 
 <br>
 
-### Dataset Description
+### <Text style="color:#008080">Dataset Description</Text>
 
 #### **File descriptions**
 
@@ -75,11 +67,11 @@ I employed two models in my study:
 
 <br>
 
-## <Text> Personalized ConvNet Conclusion</Text>
+## <Text style="color:#008080"> Personalized ConvNet Conclusion</Text>
 
 - Confusion Matrix and Accuracy Curve of personalized ConvNet
 
-<img src="../assets/img/cancer_classification/personal/matrix.png" alt="Confusion Matrix" width="400" height="300">
+<img src="../assets/img/cancer_classification/personal/matrix.png" alt="Confusion Matrix">
 
 <br>
 
@@ -90,21 +82,19 @@ I employed two models in my study:
 
 - Gaussian Noise, Gradients and Occlusion (using Captum)
 
-  <img src="../assets/img/cancer_classification/personal/gn.png" alt="Gaussian Noise" width="450" height="240">
+  <img src="../assets/img/cancer_classification/personal/gn.png" alt="Gaussian Noise">
 
-  <img src="../assets/img/cancer_classification/personal/gradi.png" alt="Gradients" width="450" height="240">
+  <img src="../assets/img/cancer_classification/personal/gradi.png" alt="Gradients">
 
-  <img src="../assets/img/cancer_classification/personal/occ.png" alt="Occlussion" width="450" height="240">
-
----
+  <img src="../assets/img/cancer_classification/personal/occ.png" alt="Occlussion">
 
 <br>
 
-## <Text> Pretrained ResNet50 Conclusion</Text>
+## <Text style="color:#008080"> Pretrained ResNet50 Conclusion</Text>
 
 - Confusion Matrix and Accuracy Curve of ResNet50
 
-  <img src="../assets/img/cancer_classification/conv50/matrix.png" alt="Confusion Matrix" width="400" height="300">
+  <img src="../assets/img/cancer_classification/conv50/matrix.png" alt="Confusion Matrix">
 
 <br>
 
@@ -115,16 +105,14 @@ I employed two models in my study:
 
 - Gaussian Noise, Gradients and Occlusion (using Captum)
 
-  <img src="../assets/img/cancer_classification/conv50/gn.png" alt="Gaussian Noise" width="450" height="240">
+  <img src="../assets/img/cancer_classification/conv50/gn.png" alt="Gaussian Noise">
 
-  <img src="../assets/img/cancer_classification/conv50/gradi.png" alt="Gradients" width="450" height="240">
+  <img src="../assets/img/cancer_classification/conv50/gradi.png" alt="Gradients">
 
-  <img src="../assets/img/cancer_classification/conv50/occ.png" alt="Occlussion" width="450" height="240">
+  <img src="../assets/img/cancer_classification/conv50/occ.png" alt="Occlussion">
 
 <br>
 
----
-
-## Conclusion
+## <Text style="color:#008080"> Conclusion</Text>
 
 The final accuracy was 96 percent. Although there were concerns about overfitting during the validation, fortunately, the results turned out well. Using the Captum library, I was able to examine how the results were predicted and which data was used for the predictions. In terms of the difference between the Personalized model and the Pretrained model, the performance of the Pretrained model was significantly better. The reason for this is that the Personalized model only used 8 layers, while the Pretrained model utilized ResNet50, which has 50 layers, allowing it to capture a greater number of features and demonstrate better performance.
