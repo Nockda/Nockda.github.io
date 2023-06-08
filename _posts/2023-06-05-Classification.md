@@ -11,11 +11,7 @@ comments: true
 
 Understanding Model Performance and Feature Interpretation using Captum
 
-<hr/>
-
 ## <Text style="color:#008080">Goal of this project</Text>
-
-<hr/>
 
 Train two deep neural network which can take images with a cell nuclei and classify it into one of the following types which are shown in the figures above:
 
@@ -36,11 +32,9 @@ Train two deep neural network which can take images with a cell nuclei and class
 
 (c) Cancer sample.
 
-<hr/>
+<br>
 
 ### <Text style="color:#008080">Methodology</Text>
-
-<hr/>
 
 I employed two models in my study:
 
@@ -51,11 +45,7 @@ I employed two models in my study:
 
 <br>
 
-<hr/>
-
 ### <Text style="color:#008080">Dataset Description</Text>
-
-<hr/>
 
 #### **File descriptions**
 
@@ -77,11 +67,7 @@ I employed two models in my study:
 
 <br>
 
-<hr/>
-
 ## <Text style="color:#008080"> Personalized ConvNet Conclusion</Text>
-
-<hr/>
 
 - Confusion Matrix and Accuracy Curve of personalized ConvNet
 
@@ -102,15 +88,9 @@ I employed two models in my study:
 
   <img src="../assets/img/cancer_classification/personal/occ.png" alt="Occlussion">
 
-<hr/>
-
 <br>
 
-<hr/>
-
 ## <Text style="color:#008080"> Pretrained ResNet50 Conclusion</Text>
-
-<hr/>
 
 - Confusion Matrix and Accuracy Curve of ResNet50
 
@@ -133,10 +113,6 @@ I employed two models in my study:
 
 <br>
 
-<hr/>
-
 ## <Text style="color:#008080"> Conclusion</Text>
-
-<hr/>
 
 The final accuracy was 96 percent. Although there were concerns about overfitting during the validation, fortunately, the results turned out well. Using the Captum library, I was able to examine how the results were predicted and which data was used for the predictions. In terms of the difference between the Personalized model and the Pretrained model, the performance of the Pretrained model was significantly better. The reason for this is that the Personalized model only used 8 layers, while the Pretrained model utilized ResNet50, which has 50 layers, allowing it to capture a greater number of features and demonstrate better performance.

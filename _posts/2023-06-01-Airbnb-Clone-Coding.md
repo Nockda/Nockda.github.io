@@ -32,8 +32,6 @@ The project aims to gain a thorough understanding of implementing a practical se
 
 <br>
 
-<hr/>
-
 <br>
 
 ## **<Text style="color:EC6664"> Backend</Text>**
@@ -44,8 +42,6 @@ For developing Airbnb backend, I used Django server on the Poetry environment. I
 Django is the python based web framework. it is easy to develop and maintain the database. The charming point is that I don't need to develop the admin page. This framework provide the admin page without any developer's effort. And this is the python based framework. So it is easy to develop and widely used.
 
 <br>
-
-<hr/>
 
 ### **<Text style="color:EC6664"> Basic concepts of Django</Text>**
 
@@ -97,8 +93,6 @@ This represents the entire backend of Airbnb I made, which is developed using Dj
 
 <br>
 
-<hr/>
-
 ## **<Text style="color:EC6664"> Front end of Airbnb</Text>**
 
 <br>
@@ -121,8 +115,6 @@ The 'rooms' link displays product information to users and hosts, and hosts can 
 Hosts and users each have different access rights to services. Hosts have the authority to modify the rooms and experiences they offer and can upload new locations. However, users have the authority to make bookings and add rooms to their wishlist. On the root page, these functions are implemented through different buttons for each user. For users, a heart-shaped wishlist is displayed, and if they are a host, they are shown a modify button and an upload photo button for their rooms.
 
 <br>
-
-<hr/>
 
 <br>
 
