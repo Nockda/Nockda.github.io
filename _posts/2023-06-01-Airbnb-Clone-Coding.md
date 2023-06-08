@@ -32,13 +32,11 @@ The project aims to gain a thorough understanding of implementing a practical se
 
 <br>
 
----
+<hr/>
 
 <br>
 
 ## **<Text style="color:EC6664"> Backend</Text>**
-
-<!-- <br> -->
 
 For developing Airbnb backend, I used Django server on the Poetry environment. I choose the Poetry for library management. Poetry is a powerful dependency management tool. I can install the library and framework into the project as package.
 
@@ -47,21 +45,7 @@ Django is the python based web framework. it is easy to develop and maintain the
 
 <br>
 
-<!-- <br>
-<div style="text-align:center">
-
-<img src="../assets/img/airbnb/graph.png" width="400" height="400">
-</div>
-
-<br>
-
-<div style="text-align:center">
-<img src="../assets/img/airbnb/chart.png" width="200" height="400">
-</div>
-
-<br> -->
-
----
+<hr/>
 
 ### **<Text style="color:EC6664"> Basic concepts of Django</Text>**
 
@@ -113,7 +97,7 @@ This represents the entire backend of Airbnb I made, which is developed using Dj
 
 <br>
 
----
+<hr/>
 
 ## **<Text style="color:EC6664"> Front end of Airbnb</Text>**
 
@@ -138,7 +122,7 @@ Hosts and users each have different access rights to services. Hosts have the au
 
 <br>
 
----
+<hr/>
 
 <br>
 
