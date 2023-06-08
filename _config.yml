@@ -24,6 +24,7 @@ navbar-links:
   The Projects:
     - Cancer Classification: "projects/cell"
     - Airbnb Cloning: "projects/airbnb"
+    - Big data analysis: "projects/bigdata"
   Contact:
     - GitHub: "https://github.com/Nockda"
     - LinkedIn: "https://www.linkedin.com/in/nockda/"
