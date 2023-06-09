@@ -22,9 +22,9 @@ author: Hyun Suk Lee
 navbar-links:
   About Me: "aboutme"
   The Projects:
-    - Cancer Classification: "projects/cell"
-    - Airbnb Cloning: "projects/airbnb"
-    - Big data analysis: "projects/bigdata"
+    - Cancer Classification: "https://nockda.github.io/2023-06-05-Classification/"
+    - Airbnb Cloning: "https://nockda.github.io/2023-06-01-Airbnb-Clone-Coding/"
+    - Big data analysis: "https://nockda.github.io/2023-06-08-Big-Data-Engineering/"
   Contact:
     - GitHub: "https://github.com/Nockda"
     - LinkedIn: "https://www.linkedin.com/in/nockda/"
