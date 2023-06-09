@@ -11,6 +11,10 @@ comments: true
 
 Understanding Model Performance and Feature Interpretation using Captum
 
+#### Using language and Tools
+
+Python, Numpy, Pandas, PyTorch, SKlearn, Ray Tune, Captum, Matplotlib
+
 ## <Text style="color:#008080">Goal of this project</Text>
 
 Train two deep neural network which can take images with a cell nuclei and classify it into one of the following types which are shown in the figures above:

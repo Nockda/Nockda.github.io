@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Design and Test Big Data Analysis with Apache Spark
+title: Design Big Data Analysis with Apache Spark
 subtitle:
 cover-img: /assets/img/bigdata/BigDataCover.png
 thumbnail-img: /assets/img/bigdata/BigDataLogo.png
@@ -11,7 +11,11 @@ comments: true
 
 Focuses on designing, implementing, and testing a complex Spark application for Big Data analysis. Evaluations will be based on functionality, code quality, efficiency.
 
-## <Text style="color:#008080">Goal of this project</Text>
+#### Using language and Tools
+
+Java, Apache spark, Python
+
+## <Text style="color:#E84CF5">Goal of this project</Text>
 
 This project is to design and implement a batch-based text search and filtering pipeline with Java Spark.
 The pipeline will do these work below.
@@ -23,7 +27,7 @@ The pipeline will do these work below.
 
 <br>
 
-## <Text style="color:#008080"> The given JSON data containing News </Text>
+## <Text style="color:#E84CF5"> The given JSON data containing News </Text>
 
 ![Json file](../assets/img/bigdata/json.png)
 
@@ -33,7 +37,7 @@ A news article contains fields such as ID, article URL, title, author, publicati
 
 <br>
 
-## <Text style="color:#008080"> Process </Text>
+## <Text style="color:#E84CF5"> Process </Text>
 
 ![Process map](../assets/img/bigdata/queries.png)
 
@@ -56,7 +60,7 @@ Throughout the implementation, utilize Spark transformations and actions to effi
 
 By following these steps, I will be able to develop a powerful text search and filtering pipeline using Apache Spark, enabling efficient retrieval of relevant documents for user-defined queries.
 
-## <Text style="color:#008080"> Conclusion</Text>
+## <Text style="color:#E84CF5"> Conclusion</Text>
 
 This project presents an exciting opportunity to leverage Apache Spark for designing and implementing a powerful text search and filtering pipeline. By working on this project, I can gain valuable experience in handling big data, processing text documents, and performing advanced analytics tasks.
 
@@ -65,3 +69,5 @@ The utilization of Apache Spark provides a scalable and distributed computing fr
 By following the outlined steps and best practices, I can contribute to the development of an effective search and filtering pipeline. The evaluation of functionality, code quality, and efficiency allows for iterative improvements and fine-tuning, ensuring the pipeline's reliability and robustness.
 
 Overall, this project offers me an opportunity to sharpen their skills in data processing, text analysis, and machine learning techniques. The insights gained from this project can be valuable in various domains, including information retrieval, recommendation systems, and data-driven decision making.
+
+[Big Data Analysis GitHub Repository Link](https://github.com/Nockda/Data-processing-with-spark.git)

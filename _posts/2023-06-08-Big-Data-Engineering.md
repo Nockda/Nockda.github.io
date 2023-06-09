@@ -11,6 +11,10 @@ comments: true
 
 Focuses on designing, implementing, and testing a complex Spark application for Big Data analysis. Evaluations will be based on functionality, code quality, efficiency.
 
+#### Using language and Tools
+
+Java, Apache spark, Python
+
 ## <Text style="color:#E84CF5">Goal of this project</Text>
 
 This project is to design and implement a batch-based text search and filtering pipeline with Java Spark.
