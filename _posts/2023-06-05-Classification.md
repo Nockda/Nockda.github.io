@@ -75,14 +75,14 @@ I employed two models in my study:
 
 - Confusion Matrix and Accuracy Curve of personalized ConvNet
 
-![Confusion Matrix](../assets/img/cancer_classification/personal/matrix.png)
+<img src="../assets/img/cancer_classification/personal/matrix.png" alt="Confusion Matrix">
 
 <br>
 
 - Accuracy Curve and Loss curve
 
-![Accuracy Curve](../assets/img/cancer_classification/personal/accuracyCurve.png)
-![Loss Curve](../assets/img/cancer_classification/personal/lossCurve.png)
+<img src="../assets/img/cancer_classification/personal/accuracyCurve.png" alt="Accuracy Curve" width="320" height="250">
+<img src="../assets/img/cancer_classification/personal/lossCurve.png" alt="Loss Curve" width="320" height="250">
 
 - Gaussian Noise, Gradients and Occlusion (using Captum)
 
