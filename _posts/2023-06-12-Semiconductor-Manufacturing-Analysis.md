@@ -2,7 +2,7 @@
 layout: post
 title: Semiconductor manufacturing analysis
 subtitle: From multi-output to single-output
-cover-img: /assets/img/bigdata/BigDataCover.png
+cover-img: /assets/img/semiconductor/cover.png
 thumbnail-img: /assets/img/semiconductor/semiLogo.png
 share-img: /assets/img/path.jpg
 tags: [python, xgboost, lightbgm, sklearn, matplotlib]
