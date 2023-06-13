@@ -145,9 +145,9 @@ Parameter Tuning - Reference : https://lightgbm.readthedocs.io/en/latest/pythona
 
 ![output1](../assets/img/semiconductor/output1.png)
 
-Here is the important features of this model. Regard of this chart, Point_1, X421, Point_9, Point_2, Point_6 is the point the manufacturor should take care of. But in this plot, we don't know the reasons. So I made a other plot.
+Here are the important features of this model: Point_1, X421, Point_9, Point_2, and Point_6. These points are crucial and require attention from the manufacturer. However, the reasons behind these observations are not clear from this chart alone. To gain further insights, I have created an additional plot.
 
-And this is the other plot of the result.
+Please provide the details or share the new plot for further analysis and interpretation.
 
 ![output2](../assets/img/semiconductor/output2.png)
 
