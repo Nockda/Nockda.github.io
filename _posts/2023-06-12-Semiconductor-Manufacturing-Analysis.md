@@ -50,8 +50,6 @@ Ultimately, the results obtained from these models will be generated, and feedba
 
 1.  Data Missing Check
 
-    '''python
-
         col = []
         missing = []
         for name in data.columns:
@@ -60,11 +58,7 @@ Ultimately, the results obtained from these models will be generated, and feedba
             missper = data[name].isnull().sum() / data.shape[0]
             missing.append(round(missper, 4))
 
-'''
-
 2.  Data Unique Check
-
-    '''python
 
         col = []
         level = []
@@ -77,24 +71,18 @@ Ultimately, the results obtained from these models will be generated, and feedba
             # Columns
             col.append(name)
 
-    '''
-
 3.  Cutting the data
 
-'''python
+        # Make a dataframe with missing data
 
-    # Make a dataframe with missing data
+        summary = pd.concat([pd.DataFrame(col, columns=['name']),
+                            pd.DataFrame(missing, columns=['Missing Percentage']),
+                            pd.DataFrame(level, columns=['Unique'])], axis=1)
 
-    summary = pd.concat([pd.DataFrame(col, columns=['name']),
-                        pd.DataFrame(missing, columns=['Missing Percentage']),
-                        pd.DataFrame(level, columns=['Unique'])], axis=1)
-
-    # Data Cutting
-    drop_col = summary['name'][(summary['Unique'] <= 1) | (summary['Missing Percentage'] >= 0.8)]
-    data.drop(columns=drop_col, inplace=True)
-    print(">>>> Data Shape : {}".format(data.shape))
-
-'''
+        # Data Cutting
+        drop_col = summary['name'][(summary['Unique'] <= 1) | (summary['Missing Percentage'] >= 0.8)]
+        data.drop(columns=drop_col, inplace=True)
+        print(">>>> Data Shape : {}".format(data.shape))
 
 After the data preprocessing, the shape changes from (1650, 9880) to (1650, 7948).
 
@@ -104,8 +92,6 @@ Prior to proceeding with the modeling process, it is important to observe the da
 
 I can see the trend of the dataset with code below
 
-'''python
-
     # Y Plot
     for i in range(1,10):
         plt.figure(figsize=(15,5))
@@ -114,8 +100,6 @@ I can see the trend of the dataset with code below
         plt.plot([0, data.shape[0]], [np.percentile(data['Y{}'.format(i)], 75), np.percentile(data['Y{}'.format(i)], 75)],c='blue')
         plt.title('Y{}'.format(i))
         plt.show()
-
-'''
 
 In this plot, it illustrates the trend of the data. The red line represents the lower 25% and the blue line represents the upper 25%.
 
