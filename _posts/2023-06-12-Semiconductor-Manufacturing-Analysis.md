@@ -15,13 +15,19 @@ comments: true
 
 Python, xgboost, lightbgm, matplotlib, joblib, pandas, sklearn
 
-## <Text style="color:#E84CF5">Goal of this project</Text>
+<br>
+<br>
+
+## <Text style="color:#50B1E4">Goal of this project</Text>
+
+<br>
 
 ![2](../assets/img/semiconductor/2.png)
 
 There are 8 main steps involved in the manufacturing of memory semiconductors. Among these processes, the Photo and Etching process stands out as the most crucial. When it comes to quality control, it is essential for the manufacturer to carefully analyze the factors that could potentially contribute to defects.
 
 ![3](../assets/img/semiconductor/3.png)
+
 Identifying the critical factor causing defects in the initial two steps is crucial in order to prevent additional costs associated with defective production. However, the small size of semiconductor products makes it challenging to inspect every single one, resulting in increased difficulty and expense for quality control (QC) efforts. Instead of inspecting each individual product, a more practical approach is to select representative samples and forecast the overall quality of an entire wafer.
 
 The dataset available for analysis contains inspection results, which are represented by numerical values. These numbers indicate the height and size of the circuits etched onto the semiconductor as a result of the photo and etching processes.
@@ -34,13 +40,13 @@ Ultimately, the results obtained from these models will be generated, and feedba
 
 <br>
 
-## <Text style="color:#E84CF5"> The dataset </Text>
+## <Text style="color:#50B1E4"> The dataset </Text>
 
 ![5](../assets/img/semiconductor/5.png)
 
 <br>
 
-## <Text style="color:#E84CF5"> Data Rediness Check </Text>
+## <Text style="color:#50B1E4"> Data Rediness Check </Text>
 
 1.  Data Missing Check
 
@@ -115,7 +121,9 @@ In this plot, it illustrates the trend of the data. The red line represents the 
 
 Except for Y2, all the other Y variables exhibit a distinctive wave pattern at wafer numbers 750-1000. As a data scientist, it is important for me to discuss this specific point with the person in charge. This particular section of the process seems to involve some action or variation that is influencing the observed wave pattern.
 
-## <Text style="color:#E84CF5"> Feature Engineering</Text>
+<br>
+
+## <Text style="color:#50B1E4"> Feature Engineering</Text>
 
 In the dataset, columns are more than rows. This will be the problem when we analysis. This feagure incur the curse of dimensionality.
 
@@ -133,7 +141,9 @@ Additionally, the columns for EQ and Y(wafer) contain categorical data, not floa
 
 By obtaining this final result, the curse of dimensionality is mitigated.
 
-## <Text style="color:#E84CF5"> Model Evaluation and Interpretation </Text>
+<br>
+
+## <Text style="color:#50B1E4"> Model Evaluation and Interpretation </Text>
 
 The best result model is
 
@@ -163,7 +173,9 @@ And this is the other plot of the result.
 
 - Similar to Point_2, Point_7 also experiences excessive cutting during the etching process. The variance associated with this point is also significant. It is important for the manufacturer to examine and rectify the over-cutting issue at Point_7 as well.
 
-## <Text style="color:#E84CF5"> Conclusion</Text>
+<br>
+
+## <Text style="color:#50B1E4"> Conclusion</Text>
 
 This project provided a great opportunity to analyze real sensor values and etching data in memory semiconductor manufacturing. By examining these datasets, valuable insights were gained, allowing for better understanding of the production process. This analysis opens up possibilities for further improvements in quality control and optimization of the etching process.
 
