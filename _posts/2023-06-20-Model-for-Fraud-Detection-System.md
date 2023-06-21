@@ -2,8 +2,8 @@
 layout: post
 title: Real-time Fraud Detection
 subtitle: Auto encoder & IF & LOF
-cover-img: /assets/img/semiconductor/cover.png
-thumbnail-img: /assets/img/semiconductor/semiLogo.png
+cover-img: /assets/img/fds/cover.png
+thumbnail-img: /assets/img/fds/fdslogo.png
 share-img: /assets/img/path.jpg
 tags: [Tensorflow, LocalOutlierFactor, AutoEncoder, IsolationForest]
 comments: true
