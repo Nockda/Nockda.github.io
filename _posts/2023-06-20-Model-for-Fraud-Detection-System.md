@@ -13,7 +13,7 @@ comments: true
 
 #### Using language and Tools
 
-Python, TensorFlow,
+Python, TensorFlow, Scikit-learn, matplotlib
 
 <br>
 <br>
