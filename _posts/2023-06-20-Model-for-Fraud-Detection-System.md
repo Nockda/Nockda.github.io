@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Real-time Fraud Detection
-subtitle: Auto encoder & IF & LOF
+title: Fraud Detection Model
+subtitle: AutoEncoder & IF & LOF
 cover-img: /assets/img/fds/cover.png
 thumbnail-img: /assets/img/fds/fdslogo.png
 share-img: /assets/img/path.jpg
