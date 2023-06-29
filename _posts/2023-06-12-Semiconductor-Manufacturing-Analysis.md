@@ -13,7 +13,7 @@ comments: true
 
 #### Using language and Tools
 
-Python, xgboost, lightbgm, matplotlib, joblib, pandas, sklearn
+Python, XGBoost, lightBGM, matplotlib, joblib, pandas, sklearn
 
 <br>
 <br>
