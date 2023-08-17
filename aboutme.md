@@ -3,7 +3,6 @@ layout: page
 subtitle: Data Scientist Note who likes Data and AI
 tagline: Who is Hyun Suk Lee?
 ---
-
 ---
 
 ## Contact
@@ -13,8 +12,8 @@ tagline: Who is Hyun Suk Lee?
 - [Blog](https://nockda.github.io)
 - [GitHub @Nockda](https://github.com/nockda)
 - [LinkedIn](https://www.linkedin.com/in/nockda/)
-- [CV](https://drive.google.com/file/d/1B1EeJuFX6bwUstTbmsuILSCS5UyWlT3M/view?usp=share_link?raw=True)
-- <nockda@gmail.com>
+- [CV](https://drive.google.com/file/d/1EUU_8K43F62tUCUL6LdP_kAYLF4pSrpU/view?usp=share_link)
+- [nockda@gmail.com](mailto:nockda@gmail.com)
 
 <br>
 
@@ -26,7 +25,7 @@ tagline: Who is Hyun Suk Lee?
 
 - _**Tier 4 visa**_ until Jan, 2024
 - after that, _**PSW visa**_ for 2 years
-- **<Text style="color:red"> Don't need the visa support</Text>**
+- **`<Text style="color:red">` Don't need the visa support`</Text>`**
 
 <br>
 
@@ -82,7 +81,7 @@ tagline: Who is Hyun Suk Lee?
 - GYBM(Global Young Business Manager) 5th
 
 <br>
- 
+
 ---
 
 ## Certificate
