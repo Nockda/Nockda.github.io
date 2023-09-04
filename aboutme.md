@@ -12,7 +12,7 @@ tagline: Who is Hyun Suk Lee?
 - [Blog](https://nockda.github.io)
 - [GitHub @Nockda](https://github.com/nockda)
 - [LinkedIn](https://www.linkedin.com/in/nockda/)
-- [CV](https://drive.google.com/file/d/1EUU_8K43F62tUCUL6LdP_kAYLF4pSrpU/view?usp=share_link)
+- [CV](https://drive.google.com/file/d/1Trkkkry4YKZrD69Ffz3nN-GxsNmIJtUT/view?usp=share_link)
 - [nockda@gmail.com](mailto:nockda@gmail.com)
 
 <br>
