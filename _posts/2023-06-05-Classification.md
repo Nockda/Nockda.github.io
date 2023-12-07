@@ -4,7 +4,7 @@ title: Identification of Different Types of Cell Nuclei in Cancer
 subtitle:
 cover-img: /assets/img/cancer_classification/cancer_cover.png
 thumbnail-img: /assets/img/cancer_classification/CancerLogo.png
-share-img: /assets/img/path.jpg
+share-img: /assets/img/cancer_classification/CancerLogo.png
 tags: [deep learning, Maching learning, kaggle, python]
 comments: true
 ---

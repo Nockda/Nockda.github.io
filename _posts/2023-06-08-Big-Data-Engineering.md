@@ -4,7 +4,7 @@ title: Design Big Data Analysis with Apache Spark
 subtitle:
 cover-img: /assets/img/bigdata/BigDataCover.png
 thumbnail-img: /assets/img/bigdata/BigDataLogo.png
-share-img: /assets/img/path.jpg
+share-img: /assets/img/bigdata/BigDataLogo.png
 tags: [NLP, big data, python, java, apache spark]
 comments: true
 ---

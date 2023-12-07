@@ -4,7 +4,7 @@ title: airbnb clone coding
 subtitle:
 cover-img: /assets/img/airbnb/cover-air.png
 thumbnail-img: /assets/img/airbnb/AirBNB clone coding logo.png
-share-img: /assets/img/path.jpg
+share-img: /assets/img/airbnb/AirBNB clone coding logo.png
 comments: true
 tags: [fullstack, Python, Django, RestAPI]
 ---
