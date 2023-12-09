@@ -12,7 +12,7 @@ tagline: Who is Hyun Suk Lee?
 - [Blog](https://nockda.github.io)
 - [GitHub @Nockda](https://github.com/nockda)
 - [LinkedIn](https://www.linkedin.com/in/nockda/)
-- [CV](https://drive.google.com/file/d/1SppkmQgeWQ4uxvFdOf7J-JxJEASL-RHo/view?usp=share_link)
+- [CV](https://drive.google.com/file/d/1jYvL7nwTGp2wPTMpEn_hLCQO8aIUKytj/view?usp=share_link)
 - [nockda@gmail.com](mailto:nockda@gmail.com)
 
 <br>
@@ -23,8 +23,7 @@ tagline: Who is Hyun Suk Lee?
 
 ---
 
-- _**Tier 4 visa**_ until Jan, 2024
-- after that, _**PSW visa**_ for 2 years
+- **PSW visa** valid for 2 years
 - **Don't need the visa support**
 
 <br>
