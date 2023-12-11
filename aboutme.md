@@ -45,15 +45,13 @@ tagline: Who is Hyun Suk Lee?
 
 ---
 
-- Python / Java / C#
-- MySQL / Oracle SQL
+- Python / Java / C# / GO
+- MySQL / Oracle SQL / PostgreSQL
 - Django, Rest API, Chakra UI, OSGI
-- **Big Data /** Hadoop, Spark
-- **NLP /** Spacy, NLTK, Re
-- **Data Science /** Pandas, Numpy, Matplotlib, Seaborn
-- **Machine Learning /** scikit-learn
-- **Deep Learning /** TensorFlow, Keras, PyTorch
-- **CI.CD /** Git, GitHub
+- **Big Data /** Hadoop, Spark, Kafka
+- **Visualization /** PowerBI, Tableu
+- **ML & DL /** TensorFlow, PyTorch
+- **CI.CD /** Git, GitHub, SVN
 
 <br>
 
