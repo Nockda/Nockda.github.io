@@ -5,7 +5,7 @@ subtitle: AutoEncoder & IF & LOF
 cover-img: /assets/img/credit/CreditCardCover.png
 thumbnail-img: /assets/img/credit/CreditCardLogo.png
 share-img: /assets/img/credit/CreditCardLogo.png
-tags: [Credit Card, Fraud Detection Model, Logistic Regression, KNN, Linear Discriminant Analysis, LDA, Support Vector Machine, SVM, Random Forest, OverSampling]
+tags: [Credit Card, Fraud Detection Model, Logistic Regression, KNN, Linear Discriminant Analysis, LDA, Support Vector Machine, SVM, Random Forest]
 comments: true
 ---
 #### Using language and Tools
@@ -304,6 +304,7 @@ The extensive runtime suggests that Random Forest requires significant computati
 | Support Vector Machines        | 0.9988   | 0.8       | 0.500  | 0.7499  | 0.6154   | 0.6148      | [0.9991, 0.8]    | [0.9998, 0.5] | [0.9994, 0.6154] | [4265, 8]       | 8.7110                 |
 
 
+
 | Model                         | Mean   | Standard Deviation | p025  | p975  |
 |-------------------------------|--------|---------------------|-------|-------|
 | Linear Discriminant Analysis  | 0.7600 | 0.1306              | 0.6667| 0.9800|
@@ -312,7 +313,8 @@ The extensive runtime suggests that Random Forest requires significant computati
 | Logistic Regression           | 0.5267 | 0.2800              | 0.0500| 0.7867|
 | Random Forest                 | 0.4667 | 0.4000              | 0.0000| 0.9667|
 
-### Model Performance Summary
+
+### <Text style="color:#4C35BD"> Model Performance Summary </Text>
 
 #### Classification Metrics
 - The Linear Discriminant Analysis model stands out with high precision, recall, and F1 Score, indicating a well-balanced performance.
