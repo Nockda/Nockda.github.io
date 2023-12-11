@@ -23,8 +23,9 @@ navbar-links:
   About Me: "aboutme"
   The Projects:
     - Consumer Analysis : "https://nockda.github.io/2023-11-29-customer/"
+    - Credit Card FDS : "https://nockda.github.io/2023-12-10-Credit-Card-Fraud-Detection-Model/"
     - Semiconductor: "https://nockda.github.io/2023-06-12-Semiconductor-Manufacturing-Analysis/"
-    - Fraud Detection: "https://nockda.github.io/2023-06-20-Model-for-Fraud-Detection-System/"
+    - Financial Transaction FDS : "https://nockda.github.io/2023-06-20-Model-for-Fraud-Detection-System/"
     - Cancer Classification: "https://nockda.github.io/2023-06-05-Classification/"
     - Big data analysis: "https://nockda.github.io/2023-06-08-Big-Data-Engineering/"
     - Airbnb Cloning: "https://nockda.github.io/2023-06-01-Airbnb-Clone-Coding/"
