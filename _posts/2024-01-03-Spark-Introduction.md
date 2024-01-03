@@ -201,17 +201,18 @@ Finally, the results are collected and printed.
 
 temperature.csv is the dummy file automatically generated.(Not a real data.) The length of this file is 48,750. this is the top 10 row of the file.
 
-| record_id | month | day | year | AverageTemperatureFahr | AverageTemperatureUncertaintyFahr | City     | country_id | Country       | Latitude | Longitude |
-|-----------|-------|-----|------|------------------------|------------------------------------|----------|------------|---------------|----------|-----------|
-| 474376    | 1     | 1   | 1853 | NA                     | NA                                 | Auckland | NEW        | New Zealand   | 36.17S   | 175.03E   |
-| 474377    | 2     | 1   | 1853 | NA                     | NA                                 | Auckland | NEW        | New Zealand   | 36.17S   | 175.03E   |
-| 474378    | 3     | 1   | 1853 | NA                     | NA                                 | Auckland | NEW        | New Zealand   | 36.17S   | 175.03E   |
-| 474379    | 4     | 1   | 1853 | NA                     | NA                                 | Auckland | NEW        | New Zealand   | 36.17S   | 175.03E   |
-| 474380    | 5     | 1   | 1853 | NA                     | NA                                 | Auckland | NEW        | New Zealand   | 36.17S   | 175.03E   |
-| 474381    | 6     | 1   | 1853 | 51.9062                | 36.9572                            | Auckland | NEW        | New Zealand   | 36.17S   | 175.03E   |
-| 474382    | 7     | 1   | 1853 | 52.3886                | 34.5488                            | Auckland | NEW        | New Zealand   | 36.17S   | 175.03E   |
-| 474383    | 8     | 1   | 1853 | 52.853                 | 33.5498                            | Auckland | NEW        | New Zealand   | 36.17S   | 175.03E   |
-| 474384    | 9     | 1   | 1853 | 52.5776                | 33.638                             | Auckland | NEW        | New Zealand   | 36.17S   | 175.03E   |
+| record_id | month | day | year | MaxTemp | MinTemp |
+|-----------|-------|-----|------|------------------------|------------------------------------|
+| 474376    | 1     | 1   | 1853 | NA                     | NA                                 |
+| 474377    | 2     | 1   | 1853 | NA                     | NA                                 |
+| 474378    | 3     | 1   | 1853 | NA                     | NA                                 |
+| 474379    | 4     | 1   | 1853 | NA                     | NA                                 |
+| 474380    | 5     | 1   | 1853 | NA                     | NA                                 |
+| 474381    | 6     | 1   | 1853 | 51.9062                | 36.9572                            |
+| 474382    | 7     | 1   | 1853 | 52.3886                | 34.5488                            |
+| 474383    | 8     | 1   | 1853 | 52.853                 | 33.5498                            |
+| 474384    | 9     | 1   | 1853 | 52.5776                | 33.638                             |
+
 
 
 ```python
@@ -287,7 +288,7 @@ Example:
 
 One valuable use case of `flatMap()` is to flatten columns that contain arrays, lists, or any nested collections. This transformation is particularly useful when dealing with nested structures in the data.
 
-### Map
+#### Map
 
 ```python
 rdd = sc.parallelize([("name", "joe,sarah,tom"), ("car", "hyundai")])
@@ -296,7 +297,7 @@ print(result.collect())
 ```
 output of __Map__ function : [['joe', 'sarah', 'tom'], ['hyundai']]
 
-### FlatMap
+#### FlatMap
 
 ```python
 rdd = sc.parallelize([("name", "joe,sarah,tom"), ("car", "hyundai")])
