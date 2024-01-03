@@ -14,6 +14,8 @@ author: HyunSuk Lee
 
 navbar-links:
   About Me: "aboutme"
+  Blog:
+    - Spark Intro : "https://nockda.github.io/2024-01-03-Spark-Introduction/"
   The Projects:
     - Consumer Analysis : "https://nockda.github.io/2023-11-29-customer/"
     - Credit Card FDS : "https://nockda.github.io/2023-12-10-Credit-Card-Fraud-Detection-Model/"
