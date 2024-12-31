@@ -23,7 +23,7 @@ tagline: Who is Hyun Suk Lee?
 
 ---
 
-- **PSW visa** valid for 2 years
+- **Global Talent Visa (Tier 1)**
 - **Don't need the visa support**
 
 <br>
