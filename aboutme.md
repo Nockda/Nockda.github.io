@@ -1,18 +1,17 @@
 ---
 layout: page
 title: About Me
-subtitle: AI Engineer building LLM systems on top of solid data engineering
+subtitle: AI Engineer building production RAG and agentic LLM systems
 tagline: Who is Hyun Suk Lee?
 ---
 
-I'm an AI Engineer with 10 years of experience building and shipping production
-AI and data systems across manufacturing, FMCG and enterprise IT. I work across
-the full GenAI stack — fine-tuning and quantising open-weight LLMs, designing
-RAG pipelines with hybrid search, and serving models on GPU infrastructure —
-backed by deep data engineering experience (ETL/ELT, Kafka, Spark, Airflow) on
-AWS and Azure.
+I'm an AI Engineer with 10 years across manufacturing, FMCG and enterprise IT,
+spanning software engineering, enterprise architecture and data engineering. I
+build production RAG and agentic LLM systems and take them from prototype
+through to live service.
 
-I hold a **UK Global Talent Visa (Tier 1)**, so I need no visa sponsorship.
+Based in London / Essex, UK, and relocatable. I hold a **UK Global Talent Visa**,
+so I need no visa sponsorship.
 
 ---
 
@@ -27,59 +26,56 @@ I hold a **UK Global Talent Visa (Tier 1)**, so I need no visa sponsorship.
 
 ## Experience
 
-#### AI Consultant (LLM Engineering) &mdash; Samsung SDS Europe, London
+#### AI Consultant, LLM Engineering &mdash; Samsung SDS Europe, London
 *May 2026 &ndash; Present*
 
-- Build hyper-personalisation services with ML for CRM and e-commerce platforms
-  (Adobe Campaign), from data pipeline design through model development to
-  production deployment.
-- Engineer LLM/RAG systems end to end on cloud GPU infrastructure: fine-tune
-  open-weight models on internal domain data, apply 4-bit quantisation for
-  efficient inference, and build retrieval over historical support tickets with
-  Elasticsearch hybrid search (BM25 + vector KNN) and multilingual embeddings.
-- Own the full engineering lifecycle — architecture, evaluation pipelines, A/B
-  testing, monitoring and iterative optimisation.
-- Design shared GPU serving architecture so multiple AI services (RAG, coding
-  assist) run on constrained hardware.
+- Define enterprise AI architecture and technical direction, setting how GenAI
+  services are designed, evaluated and deployed across CRM, e-commerce and
+  marketing platforms.
+- Built the core RAG service on on-premise GPUs — a fine-tuned, 4-bit quantised
+  open-weight model with Elasticsearch hybrid search (BM25 + vector KNN).
+  **Resolution time down 40%.**
+- Added agentic tool calling for multi-step queries, with evaluation and
+  monitoring in place before release: hallucination rate, retrieval precision,
+  A/B tests.
+- Connected AI services to enterprise systems through MCP and internal APIs,
+  giving agents controlled access to CRM and operational data.
 
-*Python · LangChain · RAG · Elasticsearch · On-premise LLM · GPU inference · SQL*
+*Python · LLM · LangGraph · MCP · RAG · Elasticsearch · APIs · Cloud · LLMOps · CI/CD · SQL*
 
 #### Enterprise System Specialist / Data Engineer &mdash; Gerald McDonald, Essex
 *April 2024 &ndash; April 2026*
 
-- Led an ERP and CRM migration as project manager: end-to-end data migration,
-  enterprise data warehouse build and workflow optimisation in Microsoft
-  Dynamics 365.
-- Took a RAG-based LLM service from proof of concept to production using AWS
-  Glue ETL pipelines, a Snowflake warehouse and a Streamlit application used by
-  internal business users.
-- Designed hybrid cloud/on-premise architecture and resilient ETL pipelines.
-- Built automated data models and Power BI dashboards aligned to business KPIs,
-  cutting manual reporting time by 20%.
+- Built a RAG/LLM service from prototype to production as sole engineer.
+  **Adopted by 50+ business users.**
+- AWS Glue ETL into a Snowflake data warehouse, hybrid retrieval via LangChain,
+  Streamlit front end. Also owned the security review and permission model.
+- Added document-processing workflows with tool calling for structured outputs.
+  **Manual review time down 60%.**
+- LLMOps: prompt versioning, precision@k monitoring, regression tests in CI/CD.
+- Led the Dynamics 365 ERP/CRM migration, designing the hybrid on-premise and
+  cloud architecture.
 
-*Python · SQL · AWS · Snowflake · Azure · Kubernetes · Dynamics 365 · LangChain*
+*Python · LangChain · RAG · AWS (Glue, S3) · Snowflake · Dynamics 365 · LLMOps · CI/CD · Kubernetes*
 
 #### Software Engineer, DevOps & Big Data &mdash; MICUBE Solution, Seoul
 *September 2021 &ndash; July 2022*
 
-- Built real-time messaging ETL pipelines with Kafka and Spark stream processing
-  for large-scale distributed analytics.
-- Developed and deployed anomaly detection models that improved production-line
-  efficiency.
-- Optimised SQL procedures across batch and streaming workloads; maintained
-  DevOps tooling with Airflow and Kubernetes.
+- Kafka and Spark pipelines processing sensor data from factory production
+  equipment.
+- Anomaly detection models flagging equipment faults before failure, cutting
+  error rates and unplanned downtime.
+- Backend services in Java and C#, SQL tuning, and DevOps tooling on Airflow
+  and Kubernetes.
 
-*Python · Java · C# · SQL · Kafka · Spark · Airflow · Kubernetes*
+*Python · Java · C# · SQL · Kafka · Spark · Airflow · Kubernetes · Anomaly detection*
 
 #### Business Analyst / Project Leader &mdash; Taekwang, Gimhae
 *June 2016 &ndash; August 2020*
 
-- Led a cross-cultural team delivering a £4M MES/SCM programme: scoping, vendor
-  coordination and rollout across manufacturing sites.
-- Analysed business processes and implemented new planning and transportation
-  systems, improving operational efficiency by 25%.
-- Built and optimised Oracle data models and PL/SQL procedures; delivered KPI
-  dashboards and led QA audits.
+- Led a **£4M MES/SCM programme** across multiple manufacturing sites.
+- Redesigned planning and logistics processes for a **25% efficiency gain**.
+- Oracle data models, PL/SQL, KPI dashboards and QA audits.
 
 *Oracle · PL/SQL · MES · SCM · Business process analysis*
 
@@ -87,23 +83,25 @@ I hold a **UK Global Talent Visa (Tier 1)**, so I need no visa sponsorship.
 
 ## Skills
 
-**Generative AI & LLM engineering** — LLM application development, fine-tuning
-and domain adaptation on proprietary data, RAG architecture, LangChain, vector
-databases and hybrid search (Elasticsearch BM25 + KNN), embedding models, prompt
-engineering, on-premise GPU inference and serving, agentic workflows
+**Generative AI & LLM engineering** — RAG architecture · vector databases and
+hybrid search (BM25 + vector KNN) · agentic workflows and tool calling ·
+LangChain · LangGraph · MCP · LLM fine-tuning · prompt engineering
 
-**MLOps & data engineering** — LLMOps, model evaluation and A/B testing, CI/CD
-for ML, AWS, Azure, Snowflake, Spark, Kafka, Airflow, Terraform, ETL pipelines,
-data modelling and warehousing
+**MLOps & data engineering** — LLMOps · evaluation frameworks (hallucination
+rate, precision@k) · model registry · A/B testing · CI/CD · monitoring · AWS
+(Glue, S3, SageMaker) · Azure · Snowflake · Kafka · Spark · Airflow · Terraform ·
+ETL/ELT · data warehousing
 
-**Machine learning & analytics** — Predictive modelling, TensorFlow, PyTorch,
-Power BI, statistical analysis
+**Machine learning & analytics** — PyTorch · TensorFlow · scikit-learn ·
+anomaly detection · churn modelling
 
-**Languages & platforms** — Python, SQL (Oracle, MSSQL, MySQL, PostgreSQL),
-Java, C#, Go, JavaScript/TypeScript, Kubernetes, Docker, Git, Dynamics 365
+**Software engineering & architecture** — System design · APIs and microservices ·
+distributed systems · enterprise integration (ERP/CRM) · hybrid cloud
+architecture · PoC-to-production ownership · stakeholder engagement · Agile ·
+PRINCE2
 
-**Delivery** — PoC-to-production ownership, cross-functional collaboration,
-requirements analysis, technical documentation, Agile, PRINCE2
+**Languages & platforms** — Python · SQL · Java · C# · Go · TypeScript · Docker ·
+Kubernetes · Git · Dynamics 365
 
 ---
 

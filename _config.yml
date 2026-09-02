@@ -14,7 +14,7 @@ baseurl: ""
 url-pretty: "nockda.github.io"
 
 # The keywords to associate with your website, for SEO purposes
-keywords: "HyunSuk Lee, Nockda, AI engineer, LLM, RAG, data engineer, machine learning, apache spark, big data, python, pytorch, tensorflow, fraud detection"
+keywords: "HyunSuk Lee, Nockda, AI engineer, LLM, RAG, agentic AI, LangGraph, MCP, LLMOps, data engineer, machine learning, apache spark, python, pytorch, tensorflow"
 
 # Description used for the RSS feed (also enables the feed link in <head>)
 rss-description: "Notes and projects on AI, LLM systems, data engineering and machine learning by HyunSuk Lee."
