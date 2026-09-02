@@ -216,7 +216,7 @@ The theme uses `subtitle` as the meta description, so the 3,345-word classifier
 comparison currently advertises itself to Google as *"AutoEncoder & IF & LOF"*.
 Four posts have an empty subtitle and fall back to a truncated excerpt.
 
-- [ ] Add `share-description` to all eight posts — one sentence naming the problem
+- [x] Add `share-description` to all eight posts — one sentence naming the problem
       and the result, e.g.
 
 ```yaml
@@ -232,7 +232,7 @@ share-description: "Comparing five classifiers on a credit-card dataset where on
 | `assets/img/semiconductor/cover.png` | 1,564,911 B |
 | `assets/img/` total | ~26 MB |
 
-- [ ] Resize covers to 1600 px wide and re-encode. Keeping the filenames means no
+- [x] Resize covers to 1600 px wide and re-encode. Keeping the filenames means no
       markup changes are needed:
 
 ```bash
@@ -263,8 +263,8 @@ Proposed vocabulary — six tags, each used more than once:
 | `python` | all except Airbnb |
 | `web` | Airbnb |
 
-- [ ] Rewrite the `tags:` line in all eight posts against this list
-- [ ] Delete tags that name a single library (`lightbgm`, `LocalOutlierFactor`,
+- [x] Rewrite the `tags:` line in all eight posts against this list
+- [x] Delete tags that name a single library (`lightbgm`, `LocalOutlierFactor`,
       `IsolationForest`, `KNN`, `LDA`, `SVM`) — those belong in the body text, not
       in navigation
 
