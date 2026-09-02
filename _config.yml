@@ -298,6 +298,11 @@ exclude:
   - README.md
   - screenshot.png
   - docs/
+  # Defining `exclude` replaces Jekyll's defaults, so the bundler paths have to
+  # be listed again — otherwise a local `bundle install --path vendor/bundle`
+  # (and the CI cache) leaves gem sources for Jekyll to try to render.
+  - vendor/
+  - .bundle/
 
 plugins:
   - jekyll-paginate
