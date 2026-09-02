@@ -2,7 +2,7 @@
 layout: post
 title: Introduction to Apache Spark 
 subtitle: How to use the Spark
-cover-img: /assets/img/spark/spark_cover.png
+cover-img: /assets/img/spark/spark_cover.jpg
 thumbnail-img: /assets/img/spark/spark_logo.png
 share-img: /assets/img/spark/spark_logo.png
 tags: [Apache spark, Big data]

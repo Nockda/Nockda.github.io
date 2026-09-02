@@ -122,8 +122,8 @@ Hosts and users each have different access rights to services. Hosts have the au
 
 ## **<Text style="color:#EC6664"> Screen shots of Airbnb</Text>**
 
-<img src="../assets/img/airbnb/7.png"/>
-<img src="../assets/img/airbnb/8.png"/>
+<img src="../assets/img/airbnb/7.jpg"/>
+<img src="../assets/img/airbnb/8.jpg"/>
 
 <br>
 

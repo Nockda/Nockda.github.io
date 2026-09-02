@@ -3,7 +3,7 @@ layout: post
 project: true
 title: Semiconductor manufacturing analysis
 subtitle: From multi-output to single-output
-cover-img: /assets/img/semiconductor/cover.png
+cover-img: /assets/img/semiconductor/cover.jpg
 thumbnail-img: /assets/img/semiconductor/semiLogo.png
 share-img: /assets/img/semiconductor/semiLogo.png
 tags: [python, xgboost, lightbgm, sklearn, matplotlib]
@@ -11,7 +11,7 @@ comments: true
 share-description: "Predicting wafer defects from 9,880 etching sensor columns with LightGBM, cutting the feature set to fight the curse of dimensionality."
 ---
 
-![1](../assets/img/semiconductor/1.png)
+![1](../assets/img/semiconductor/1.jpg)
 
 #### Using language and Tools
 

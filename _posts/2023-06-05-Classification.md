@@ -3,7 +3,7 @@ layout: post
 project: true
 title: Identification of Different Types of Cell Nuclei in Cancer
 subtitle:
-cover-img: /assets/img/cancer_classification/cancer_cover.png
+cover-img: /assets/img/cancer_classification/cancer_cover.jpg
 thumbnail-img: /assets/img/cancer_classification/CancerLogo.png
 share-img: /assets/img/cancer_classification/CancerLogo.png
 tags: [deep learning, Maching learning, kaggle, python]
@@ -30,7 +30,7 @@ Train two deep neural network which can take images with a cell nuclei and class
 
 <br>
 
-![Cell sample](../assets/img/cancer_classification/cell_pic.png)
+![Cell sample](../assets/img/cancer_classification/cell_pic.jpg)
 
 (a) Normal Colon Tissue.
 

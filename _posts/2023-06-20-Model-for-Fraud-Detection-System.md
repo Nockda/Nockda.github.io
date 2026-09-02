@@ -3,7 +3,7 @@ layout: post
 project: true
 title: Fraud Detection Model
 subtitle: AutoEncoder & IF & LOF
-cover-img: /assets/img/fds/cover.png
+cover-img: /assets/img/fds/cover.jpg
 thumbnail-img: /assets/img/fds/fdslogo.png
 share-img: /assets/img/fds/fdslogo.png
 tags: [Tensorflow, LocalOutlierFactor, AutoEncoder, IsolationForest]
