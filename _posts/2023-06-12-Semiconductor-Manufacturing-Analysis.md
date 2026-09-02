@@ -6,7 +6,7 @@ subtitle: From multi-output to single-output
 cover-img: /assets/img/semiconductor/cover.jpg
 thumbnail-img: /assets/img/semiconductor/semiLogo.png
 share-img: /assets/img/semiconductor/semiLogo.png
-tags: [python, xgboost, lightbgm, sklearn, matplotlib]
+tags: [machine-learning, analytics, python]
 comments: true
 share-description: "Predicting wafer defects from 9,880 etching sensor columns with LightGBM, cutting the feature set to fight the curse of dimensionality."
 ---

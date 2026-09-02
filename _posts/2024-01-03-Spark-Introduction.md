@@ -5,7 +5,7 @@ subtitle: How to use the Spark
 cover-img: /assets/img/spark/spark_cover.jpg
 thumbnail-img: /assets/img/spark/spark_logo.png
 share-img: /assets/img/spark/spark_logo.png
-tags: [Apache spark, Big data]
+tags: [data-engineering, python]
 comments: true
 share-description: "A beginner's walkthrough of PySpark: word counts, countByValue, groupBy averages, and Spark SQL over CSV files."
 ---

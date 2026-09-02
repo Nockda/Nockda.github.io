@@ -7,7 +7,7 @@ cover-img: /assets/img/airbnb/cover-air.png
 thumbnail-img: /assets/img/airbnb/AirBNB clone coding logo.png
 share-img: /assets/img/airbnb/AirBNB clone coding logo.png
 comments: true
-tags: [fullstack, Python, Django, RestAPI]
+tags: [web, python]
 share-description: "Building an 11-app Airbnb clone with a Django REST API backend and a React front end, from data model to booking flow."
 ---
 

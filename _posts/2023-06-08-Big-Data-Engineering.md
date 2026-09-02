@@ -6,7 +6,7 @@ subtitle:
 cover-img: /assets/img/bigdata/BigDataCover.jpg
 thumbnail-img: /assets/img/bigdata/BigDataLogo.png
 share-img: /assets/img/bigdata/BigDataLogo.png
-tags: [NLP, big data, python, java, apache spark]
+tags: [data-engineering, python]
 comments: true
 share-description: "Ranking and filtering 670,000 Washington Post articles by query relevance with a Java Spark DPH scoring pipeline."
 ---

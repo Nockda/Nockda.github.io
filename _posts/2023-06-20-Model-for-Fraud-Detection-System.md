@@ -6,7 +6,7 @@ subtitle: AutoEncoder & IF & LOF
 cover-img: /assets/img/fds/cover.jpg
 thumbnail-img: /assets/img/fds/fdslogo.png
 share-img: /assets/img/fds/fdslogo.png
-tags: [Tensorflow, LocalOutlierFactor, AutoEncoder, IsolationForest]
+tags: [machine-learning, python]
 comments: true
 share-description: "Finding fraud in unlabeled transactions with an AutoEncoder for features, then comparing Isolation Forest against Local Outlier Factor."
 ---

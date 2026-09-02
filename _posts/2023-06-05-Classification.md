@@ -6,7 +6,7 @@ subtitle:
 cover-img: /assets/img/cancer_classification/cancer_cover.jpg
 thumbnail-img: /assets/img/cancer_classification/CancerLogo.png
 share-img: /assets/img/cancer_classification/CancerLogo.png
-tags: [deep learning, Maching learning, kaggle, python]
+tags: [machine-learning, python]
 comments: true
 share-description: "Classifying four types of cell nuclei in cancer images with a custom ConvNet and a pretrained ResNet50, reaching 96% accuracy."
 ---
