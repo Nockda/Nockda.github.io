@@ -7,6 +7,7 @@ thumbnail-img: /assets/img/spark/spark_logo.png
 share-img: /assets/img/spark/spark_logo.png
 tags: [Apache spark, Big data]
 comments: true
+share-description: "A beginner's walkthrough of PySpark: word counts, countByValue, groupBy averages, and Spark SQL over CSV files."
 ---
 
 #### Using Language and Tools

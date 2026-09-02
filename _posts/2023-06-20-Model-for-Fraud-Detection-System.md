@@ -8,6 +8,7 @@ thumbnail-img: /assets/img/fds/fdslogo.png
 share-img: /assets/img/fds/fdslogo.png
 tags: [Tensorflow, LocalOutlierFactor, AutoEncoder, IsolationForest]
 comments: true
+share-description: "Finding fraud in unlabeled transactions with an AutoEncoder for features, then comparing Isolation Forest against Local Outlier Factor."
 ---
 
 ![1](../assets/img/fds/1.png)

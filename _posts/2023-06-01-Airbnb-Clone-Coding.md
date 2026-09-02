@@ -8,6 +8,7 @@ thumbnail-img: /assets/img/airbnb/AirBNB clone coding logo.png
 share-img: /assets/img/airbnb/AirBNB clone coding logo.png
 comments: true
 tags: [fullstack, Python, Django, RestAPI]
+share-description: "Building an 11-app Airbnb clone with a Django REST API backend and a React front end, from data model to booking flow."
 ---
 
 This is Full-stack coding. Building Airbnb service with Django and React. It covers the backend and frontend components, including app functionalities and their interaction.

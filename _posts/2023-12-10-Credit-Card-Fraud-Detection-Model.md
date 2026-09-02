@@ -8,6 +8,7 @@ thumbnail-img: /assets/img/credit/CreditCardLogo.png
 share-img: /assets/img/credit/CreditCardLogo.png
 tags: [Credit Card, Fraud Detection Model, Logistic Regression, KNN, Linear Discriminant Analysis, LDA, Support Vector Machine, SVM, Random Forest]
 comments: true
+share-description: "Comparing five classifiers on a credit-card dataset where only 0.17% of transactions are fraud, and why accuracy is the wrong metric."
 ---
 #### Using language and Tools
 

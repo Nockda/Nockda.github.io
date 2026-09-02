@@ -8,6 +8,7 @@ thumbnail-img: /assets/img/cancer_classification/CancerLogo.png
 share-img: /assets/img/cancer_classification/CancerLogo.png
 tags: [deep learning, Maching learning, kaggle, python]
 comments: true
+share-description: "Classifying four types of cell nuclei in cancer images with a custom ConvNet and a pretrained ResNet50, reaching 96% accuracy."
 ---
 
 Understanding Model Performance and Feature Interpretation using Captum

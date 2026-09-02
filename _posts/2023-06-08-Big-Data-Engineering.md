@@ -8,6 +8,7 @@ thumbnail-img: /assets/img/bigdata/BigDataLogo.png
 share-img: /assets/img/bigdata/BigDataLogo.png
 tags: [NLP, big data, python, java, apache spark]
 comments: true
+share-description: "Ranking and filtering 670,000 Washington Post articles by query relevance with a Java Spark DPH scoring pipeline."
 ---
 
 Focuses on designing, implementing, and testing a complex Spark application for Big Data analysis. Evaluations will be based on functionality, code quality, efficiency.
