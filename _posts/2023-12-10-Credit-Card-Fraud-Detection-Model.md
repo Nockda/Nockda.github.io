@@ -1,5 +1,6 @@
 ---
 layout: post
+project: true
 title: Credit Card Fraud Detection Model
 subtitle: AutoEncoder & IF & LOF
 cover-img: /assets/img/credit/CreditCardCover.png

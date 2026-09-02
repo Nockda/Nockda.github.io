@@ -1,0 +1,356 @@
+/* ---------------------------------------------------------------
+   Custom styles layered on top of Beautiful Jekyll.
+   Loaded last (via `site-css` in _config.yml), so plain overrides win.
+   Two jobs: a calmer type scale, and a dark theme the base theme lacks.
+   --------------------------------------------------------------- */
+
+:root {
+  --ink: #2e3a45;
+  --ink-soft: #6b7680;
+  --page: #ffffff;
+  --surface: #f7f9f9;
+  --border: #e3e8ec;
+  --accent: #0f6f5c;
+  --accent-hover: #0a5546;
+  --code-bg: #f4f6f7;
+}
+
+/* --- Typography --- */
+
+body {
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  line-height: 1.7;
+  margin: 1.4rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+h2, h3 {
+  margin-top: 2.4rem;
+}
+
+/* The theme underlines every link; keep that for prose, drop it elsewhere. */
+a {
+  color: var(--accent);
+}
+a:hover, a:focus {
+  color: var(--accent-hover);
+}
+
+blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1.25rem;
+  font-style: normal;
+  color: var(--ink-soft);
+}
+
+pre, code {
+  font-size: 0.875rem;
+}
+code {
+  background-color: var(--code-bg);
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+}
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+pre code {
+  background: none;
+  padding: 0;
+}
+
+table {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+table th, table td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+}
+table th {
+  background-color: var(--surface);
+}
+
+/* Post images shouldn't blow past the column on mobile. */
+.post-container img, .post-entry img, article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* --- Navbar --- */
+
+.navbar-custom {
+  border-bottom: 1px solid var(--border);
+  box-shadow: none;
+}
+.navbar-custom .navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.navbar-custom .nav-link {
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+}
+
+/* --- Post list --- */
+
+.post-preview {
+  border-bottom: 1px solid var(--border);
+  padding: 1.75rem 0;
+}
+.post-preview .post-title {
+  font-size: 1.6rem;
+}
+.post-preview .post-meta {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  font-style: normal;
+  letter-spacing: 0.03em;
+}
+.blog-tags a {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+.blog-tags a:hover {
+  border-color: var(--accent);
+}
+
+/* --- Projects page --- */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0 3rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--page);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.project-card:hover, .project-card:focus {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(15, 111, 92, 0.12);
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card-img {
+  aspect-ratio: 16 / 9;
+  background-color: var(--surface);
+}
+.project-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.project-card-body {
+  padding: 1rem 1.1rem 1.2rem;
+}
+.project-card-title {
+  font-size: 1.15rem;
+  margin: 0 0 0.35rem;
+}
+.project-card-subtitle {
+  margin: 0 0 0.4rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+.project-card-date {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+}
+.project-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+}
+.project-card-tags li {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
+}
+
+/* --- Footer --- */
+
+footer {
+  border-top: 1px solid var(--border);
+}
+
+/* ---------------------------------------------------------------
+   Dark theme. The base theme hardcodes its colours from _config.yml,
+   so each of those rules needs an explicit counterpart here.
+   --------------------------------------------------------------- */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #d7dee3;
+    --ink-soft: #96a1aa;
+    --page: #14181b;
+    --surface: #1c2226;
+    --border: #2b3338;
+    --accent: #4fc4a8;
+    --accent-hover: #77d9c2;
+    --code-bg: #1c2226;
+  }
+
+  body {
+    background-color: var(--page);
+    color: var(--ink);
+  }
+
+  a, .post-preview a:hover, .post-preview a:focus {
+    color: var(--accent);
+  }
+  a:hover, a:focus {
+    color: var(--accent-hover);
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .post-preview .post-title,
+  .post-preview .post-subtitle,
+  .post-preview a,
+  .intro-header .page-heading h1,
+  .intro-header .post-heading h1 {
+    color: var(--ink);
+  }
+
+  .post-preview .post-meta,
+  .post-heading .post-meta,
+  .intro-header .page-heading .page-subheading,
+  .intro-header .post-heading .post-subheading,
+  .text-muted {
+    color: var(--ink-soft) !important;
+  }
+
+  .navbar-custom,
+  .navbar-custom .nav-item.dropdown .dropdown-menu {
+    background-color: var(--surface);
+    border-color: var(--border);
+  }
+  .navbar-custom .navbar-brand,
+  .navbar-custom .nav-link,
+  .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
+    color: var(--ink);
+  }
+  .navbar-custom .navbar-nav .dropdown-menu .dropdown-item:hover,
+  .navbar-custom .navbar-nav .dropdown-menu .dropdown-item:focus {
+    background-color: var(--page);
+    color: var(--accent);
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(215,222,227,0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  .navbar-toggler {
+    border-color: var(--border);
+  }
+
+  /* The avatar sits on the page background, not the navbar. */
+  .avatar-img-border {
+    box-shadow: 0 0 0 1px var(--border);
+  }
+
+  footer {
+    background-color: var(--surface);
+    border-top-color: var(--border);
+  }
+  footer a, footer .copyright, footer .theme-by {
+    color: var(--ink-soft);
+  }
+  footer a:hover, footer a:focus {
+    color: var(--accent);
+  }
+
+  code, pre {
+    background-color: var(--code-bg);
+    color: var(--ink);
+  }
+  pre {
+    border-color: var(--border);
+  }
+  .highlight, .highlight pre {
+    background-color: var(--code-bg);
+  }
+
+  table th {
+    background-color: var(--surface);
+  }
+  table th, table td {
+    border-color: var(--border);
+  }
+
+  hr, hr.small, .post-preview {
+    border-color: var(--border);
+  }
+
+  blockquote {
+    color: var(--ink-soft);
+  }
+
+  .project-card {
+    background-color: var(--surface);
+  }
+  .project-card:hover, .project-card:focus {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  }
+
+  /* Search overlay injected by the theme */
+  #beautifuljekyll-search-overlay {
+    background-color: rgba(20, 24, 27, 0.97);
+  }
+  #nav-search-input,
+  #search-results-container {
+    background-color: var(--surface);
+    color: var(--ink);
+    border-color: var(--border);
+  }
+  #nav-search-input::placeholder {
+    color: var(--ink-soft);
+  }
+  #search-results-container a {
+    color: var(--accent);
+  }
+  #nav-search-exit {
+    color: var(--ink-soft);
+  }
+}

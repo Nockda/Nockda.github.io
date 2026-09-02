@@ -1,5 +1,6 @@
 ---
 layout: post
+project: true
 title: airbnb clone coding
 subtitle:
 cover-img: /assets/img/airbnb/cover-air.png

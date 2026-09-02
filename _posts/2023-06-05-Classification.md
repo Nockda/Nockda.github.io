@@ -1,5 +1,6 @@
 ---
 layout: post
+project: true
 title: Identification of Different Types of Cell Nuclei in Cancer
 subtitle:
 cover-img: /assets/img/cancer_classification/cancer_cover.png

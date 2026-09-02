@@ -8,26 +8,31 @@ title: HyunSuk Lee
 # Your name to show in the footer
 author: HyunSuk Lee
 
+# Canonical site address (used for absolute URLs, the sitemap and social cards)
+url: "https://nockda.github.io"
+baseurl: ""
+url-pretty: "nockda.github.io"
+
+# The keywords to associate with your website, for SEO purposes
+keywords: "HyunSuk Lee, Nockda, AI engineer, LLM, RAG, data engineer, machine learning, apache spark, big data, python, pytorch, tensorflow, fraud detection"
+
+# Description used for the RSS feed (also enables the feed link in <head>)
+rss-description: "Notes and projects on AI, LLM systems, data engineering and machine learning by HyunSuk Lee."
+
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
 
 navbar-links:
+  Blog: "/"
+  Projects: "projects"
+  Tags: "tags"
   About Me: "aboutme"
-  Blog:
-    - Spark Intro : "https://nockda.github.io/2024-01-03-Spark-Introduction/"
-  The Projects:
-    - Consumer Analysis : "https://nockda.github.io/2023-11-29-customer/"
-    - Credit Card FDS : "https://nockda.github.io/2023-12-10-Credit-Card-Fraud-Detection-Model/"
-    - Semiconductor: "https://nockda.github.io/2023-06-12-Semiconductor-Manufacturing-Analysis/"
-    - Financial Transaction FDS : "https://nockda.github.io/2023-06-20-Model-for-Fraud-Detection-System/"
-    - Cancer Classification: "https://nockda.github.io/2023-06-05-Classification/"
-    - Big data analysis: "https://nockda.github.io/2023-06-08-Big-Data-Engineering/"
-    - Airbnb Cloning: "https://nockda.github.io/2023-06-01-Airbnb-Clone-Coding/"
   Contact:
     - GitHub: "https://github.com/nockda"
     - LinkedIn: "https://www.linkedin.com/in/nockda/"
-    - CV : "https://drive.google.com/file/d/1jYvL7nwTGp2wPTMpEn_hLCQO8aIUKytj/view?usp=share_link"
+    - CV: "https://drive.google.com/file/d/1jYvL7nwTGp2wPTMpEn_hLCQO8aIUKytj/view?usp=share_link"
+    - Email: "mailto:nockda@gmail.com"
 
 ################
 # --- Logo --- #
@@ -55,6 +60,7 @@ social-network-links:
   linkedin: nockda
   github: "https://github.com/Nockda"
   telephone: +447394896205
+  rss: true
 #  medium: yourname
 #  reddit: yourname
 #  linkedin: daattali
@@ -119,17 +125,17 @@ navbar-var-length: false
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#EAEAEA"
-navbar-text-col: "#404040"
-navbar-border-col: "#DDDDDD"
+navbar-col: "#FFFFFF"
+navbar-text-col: "#1F2933"
+navbar-border-col: "#E3E8EC"
 page-col: "#FFFFFF"
-text-col: "#404040"
-link-col: "#008AFF"
-hover-col: "#0085A1"
-footer-col: "#EAEAEA"
-footer-text-col: "#777777"
-footer-link-col: "#404040"
-footer-hover-col: "#0085A1"
+text-col: "#2E3A45"
+link-col: "#0F6F5C"
+hover-col: "#0A5546"
+footer-col: "#F4F7F6"
+footer-text-col: "#6B7680"
+footer-link-col: "#2E3A45"
+footer-hover-col: "#0F6F5C"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
@@ -139,11 +145,11 @@ footer-hover-col: "#0085A1"
 #page-img: "/assets/img/bgimage.png"
 
 # Suggest a colour for mobile browsers to use as the browser's theme. This is only supported by a few mobile browsers.
-#mobile-theme-col: "#0085A1"
+mobile-theme-col: "#0F6F5C"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
-#site-css:
-#  - "/assets/css/custom-styles.css"
+site-css:
+  - "/assets/css/custom.css"
 
 # If you have common JavaScript files that should be included in every page, list them here
 #site-js:
@@ -193,7 +199,6 @@ footer-hover-col: "#0085A1"
 # (3) Install the Utterances app in your repository https://github.com/apps/utterances
 # See more details about the parameters below at https://utteranc.es/
 #utterances:
-repository: Nockda/Nockda.github.io
 #  repository: # GitHub username/repository eg. "daattali/beautiful-jekyll"
 #  issue-term: title   # Mapping between blog posts and GitHub issues
 #  theme: github-light # Utterances theme

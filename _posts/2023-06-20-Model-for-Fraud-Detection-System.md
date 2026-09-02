@@ -1,5 +1,6 @@
 ---
 layout: post
+project: true
 title: Fraud Detection Model
 subtitle: AutoEncoder & IF & LOF
 cover-img: /assets/img/fds/cover.png

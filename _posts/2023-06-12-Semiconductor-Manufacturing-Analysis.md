@@ -1,5 +1,6 @@
 ---
 layout: post
+project: true
 title: Semiconductor manufacturing analysis
 subtitle: From multi-output to single-output
 cover-img: /assets/img/semiconductor/cover.png

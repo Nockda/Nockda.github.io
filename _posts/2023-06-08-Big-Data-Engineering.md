@@ -1,5 +1,6 @@
 ---
 layout: post
+project: true
 title: Design Big Data Analysis with Apache Spark
 subtitle:
 cover-img: /assets/img/bigdata/BigDataCover.png
