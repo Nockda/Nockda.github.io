@@ -19,7 +19,7 @@ so I need no visa sponsorship.
 
 - [GitHub @Nockda](https://github.com/nockda)
 - [LinkedIn](https://www.linkedin.com/in/nockda/)
-- [CV](https://drive.google.com/file/d/1jYvL7nwTGp2wPTMpEn_hLCQO8aIUKytj/view?usp=share_link)
+- [CV (PDF)](/assets/cv/HyunSuk_Lee_CV.pdf)
 - [nockda@gmail.com](mailto:nockda@gmail.com)
 
 ---
