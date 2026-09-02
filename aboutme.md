@@ -126,7 +126,7 @@ Kubernetes · Git · Dynamics 365
 - PRINCE2 Foundation
 - [TensorFlow Developer Certificate](https://www.credential.net/f77748c3-e10c-41c8-ac6c-79a1a6c36ac4#gs.z83vau)
 
-![TensorFlow Developer Certificate](assets/img/Tensorflow.jpeg)
+![TensorFlow Developer Certificate](/assets/img/Tensorflow.jpeg)
 
 ---
 

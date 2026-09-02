@@ -76,7 +76,7 @@ When splitting the data with stratify=y, it maintains the original distribution 
 
 The plot below illustrates the distribution of labels across different columns.
 
-   <img src="../assets/img/credit/distribution.jpg"/>
+   <img src="../assets/img/credit/distribution.png"/>
 
 
 ## <Text style="color:#4C35BD">Multicollinearity Analysis</Text>
