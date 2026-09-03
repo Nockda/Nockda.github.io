@@ -45,7 +45,7 @@ However, it's important to note that in this particular project, the main focus 
 ![data](../assets/img/fds/2.png)
 <br>
 
-## <Text style="color:#4C35BD"> Data Rediness Check </Text>
+## <Text style="color:#4C35BD"> Data Readiness Check </Text>
 
 1.  Data Missing Check
 

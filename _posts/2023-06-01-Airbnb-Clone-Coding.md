@@ -1,7 +1,7 @@
 ---
 layout: post
 project: true
-title: airbnb clone coding
+title: Airbnb Clone Coding
 subtitle:
 cover-img: /assets/img/airbnb/cover-air.png
 thumbnail-img: /assets/img/airbnb/AirBNB clone coding logo.png
@@ -72,7 +72,7 @@ Django's app: A Django app is a modular component that encapsulates a specific f
 
 <br>
 
-![This iamge is about the apps in Airbnb](/assets/img/airbnb/3.png)
+![The apps in the Airbnb clone](/assets/img/airbnb/3.png)
 
 <img src="../assets/img/airbnb/3.png">
 

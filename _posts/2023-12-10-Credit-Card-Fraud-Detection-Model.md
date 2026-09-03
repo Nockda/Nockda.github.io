@@ -2,7 +2,7 @@
 layout: post
 project: true
 title: Credit Card Fraud Detection Model
-subtitle: AutoEncoder & IF & LOF
+subtitle: Five classifiers on a 0.17% positive class
 cover-img: /assets/img/credit/CreditCardCover.png
 thumbnail-img: /assets/img/credit/CreditCardLogo.png
 share-img: /assets/img/credit/CreditCardLogo.png
@@ -38,7 +38,7 @@ Ideally, if we could consider the individual characteristics of each feature, we
 | Label | Description | count  | proportion |
 | :---- | :---------- | :----- | :--------- |
 | 0     | Normal      | 284315 | 0.99827    |
-| 1     | anormaly    | 492    | 0.00173    |
+| 1     | anomaly     | 492    | 0.00173    |
 
 <br>
 
@@ -56,7 +56,7 @@ This is the value counts after undersampling.
 | Label | Description | count  | proportion |
 | :---- | :---------- | :----- | :--------- |
 | 0     | Normal      | 14216 | 0.99824    |
-| 1     | anormaly    | 25    | 0.00176    |
+| 1     | anomaly     | 25    | 0.00176    |
 
 ## <Text style="color:#4C35BD">Labeling After Sampling</Text>
 

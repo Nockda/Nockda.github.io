@@ -15,7 +15,7 @@ share-description: "Predicting wafer defects from 9,880 etching sensor columns w
 
 #### Using language and Tools
 
-Python, XGBoost, lightBGM, matplotlib, joblib, pandas, sklearn
+Python, XGBoost, LightGBM, matplotlib, joblib, pandas, sklearn
 
 <br>
 <br>
@@ -48,7 +48,7 @@ Ultimately, the results obtained from these models will be generated, and feedba
 
 <br>
 
-## <Text style="color:#50B1E4"> Data Rediness Check </Text>
+## <Text style="color:#50B1E4"> Data Readiness Check </Text>
 
 1.  Data Missing Check
 
