@@ -92,13 +92,70 @@ top.
 
 The fusion combines five rankings, and the weights are deliberately asymmetric:
 
-| Ranking | Weight | Reasoning |
-| :--- | ---: | :--- |
-| `problem` vector | 1.5 | The query is always an unsolved problem. Same kind of text. Strongest signal. |
-| `bm25` | 1.0 | Exact terms — error strings, component names, version numbers |
-| `root_cause` vector | 1.0 | Fires when the underlying cause is shared |
-| `solution` vector | 0.7 | A solution restates its problem, so it matches, but weakly |
-| `legacy` vector | 0.5 | Fallback for documents not yet migrated to the axes |
+<svg viewBox="0 0 720 300" role="img" width="100%"
+     aria-label="Five rankings feed one weighted reciprocal rank fusion: problem vector at weight 1.5, bm25 at 1.0, root_cause vector at 1.0, solution vector at 0.7, legacy vector at 0.5. All five are issued in a single msearch round trip and produce one ranked list."
+     style="max-width:720px;margin:2rem auto;display:block;font-family:'Open Sans',Helvetica,Arial,sans-serif">
+
+  <text x="152" y="26" text-anchor="end" font-size="11.5" letter-spacing="1.2" fill="var(--ink-soft)">RANKING</text>
+  <text x="164" y="26" font-size="11.5" letter-spacing="1.2" fill="var(--ink-soft)">WEIGHT</text>
+  <text x="360" y="26" font-size="11.5" letter-spacing="1.2" fill="var(--ink-soft)">WHY</text>
+
+  <text x="152" y="56" text-anchor="end" font-size="12" font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink)" font-weight="700">problem vector</text>
+  <rect x="164" y="45" width="150.0" height="14" rx="2" fill="var(--accent)" opacity="0.95"/>
+  <text x="322.0" y="56" font-size="11.5" font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink-soft)">1.5</text>
+  <text x="360" y="56" font-size="11.5" fill="var(--ink-soft)">same kind of text as the query</text>
+  <path d="M336 52 L500 52" stroke="none"/>
+  <text x="152" y="88" text-anchor="end" font-size="12" font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink-soft)" font-weight="400">bm25</text>
+  <rect x="164" y="77" width="100.0" height="14" rx="2" fill="var(--accent)" opacity="0.45"/>
+  <text x="272.0" y="88" font-size="11.5" font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink-soft)">1.0</text>
+  <text x="360" y="88" font-size="11.5" fill="var(--ink-soft)">exact terms, error strings</text>
+  <path d="M336 84 L500 84" stroke="none"/>
+  <text x="152" y="120" text-anchor="end" font-size="12" font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink-soft)" font-weight="400">root_cause vec</text>
+  <rect x="164" y="109" width="100.0" height="14" rx="2" fill="var(--accent)" opacity="0.45"/>
+  <text x="272.0" y="120" font-size="11.5" font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink-soft)">1.0</text>
+  <text x="360" y="120" font-size="11.5" fill="var(--ink-soft)">shared underlying cause</text>
+  <path d="M336 116 L500 116" stroke="none"/>
+  <text x="152" y="152" text-anchor="end" font-size="12" font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink-soft)" font-weight="400">solution vector</text>
+  <rect x="164" y="141" width="70.0" height="14" rx="2" fill="var(--accent)" opacity="0.45"/>
+  <text x="242.0" y="152" font-size="11.5" font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink-soft)">0.7</text>
+  <text x="360" y="152" font-size="11.5" fill="var(--ink-soft)">restates its problem, weakly</text>
+  <path d="M336 148 L500 148" stroke="none"/>
+  <text x="152" y="184" text-anchor="end" font-size="12" font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink-soft)" font-weight="400">legacy vector</text>
+  <rect x="164" y="173" width="50.0" height="14" rx="2" fill="var(--accent)" opacity="0.45"/>
+  <text x="222.0" y="184" font-size="11.5" font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink-soft)">0.5</text>
+  <text x="360" y="184" font-size="11.5" fill="var(--ink-soft)">not yet migrated</text>
+  <path d="M336 180 L500 180" stroke="none"/>
+
+  <!-- bracket collecting the five legs -->
+  <path d="M596 45 h12 v144 h-12" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+  <text x="614" y="112" font-size="11.5" fill="var(--ink-soft)">one</text>
+  <text x="614" y="128" font-size="11.5" font-family="ui-monospace,Menlo,monospace" fill="var(--ink)">_msearch</text>
+
+  <!-- down into fusion -->
+  <path d="M602 189 L602 214 Q602 224 592 224 L436 224" fill="none" stroke="var(--ink-soft)" stroke-width="1.5"/>
+  <path d="M430 224 l8 -5 v10 z" fill="var(--ink-soft)"/>
+
+  <rect x="248" y="204" width="182" height="40" rx="6" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+  <text x="339" y="222" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--ink)">weighted RRF</text>
+  <text x="339" y="237" text-anchor="middle" font-size="11" font-family="ui-monospace,Menlo,monospace" fill="var(--ink-soft)">rank constant 60</text>
+
+  <path d="M339 244 L339 262" fill="none" stroke="var(--ink-soft)" stroke-width="1.5"/>
+  <path d="M339 268 l-5 -9 h10 z" fill="var(--ink-soft)"/>
+
+  <rect x="219" y="274" width="240" height="9" rx="2" fill="var(--accent)"/>
+  <rect x="219" y="286" width="196" height="9" rx="2" fill="var(--accent)" opacity="0.7"/>
+  <text x="474" y="288" font-size="12" font-weight="700" fill="var(--ink)">one ranked list</text>
+</svg>
 
 These come from what the fields *are*, not from a sweep. Someone searching is
 describing a problem they have not solved, so their text resembles a `problem`

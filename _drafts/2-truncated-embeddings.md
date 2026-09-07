@@ -41,14 +41,89 @@ document that runs long**.
 
 So I measured which fields actually survived into the vector:
 
-| Field | Present in the vector |
-| :--- | ---: |
-| `title` | 100% |
-| `problem` | 100% |
-| `root_cause` | 99.6% |
-| **`solution`** | **76.4%** |
-| **`problem` / `solution_keywords`** | **47.9%** |
-| `additional_info` | 40.2% |
+<svg viewBox="0 0 720 268" role="img" width="100%"
+     aria-label="Share of each field that survived into the embedding vector: title 100%, problem 100%, root_cause 99.6%, solution 76.4%, keywords 47.9%, additional_info 40.2%. The last three fall well short because the 512-token cut always lands in the same place."
+     style="max-width:720px;margin:2rem auto;display:block;font-family:'Open Sans',Helvetica,Arial,sans-serif">
+  <text x="238" y="26" text-anchor="end" font-size="11.5" letter-spacing="1.2"
+        fill="var(--ink-soft)">FIELD</text>
+  <text x="250" y="26" font-size="11.5" letter-spacing="1.2"
+        fill="var(--ink-soft)">SHARE THAT REACHED THE VECTOR</text>
+  <text x="238" y="60" text-anchor="end" font-size="12.5"
+        font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink-soft)"
+        font-weight="400">title</text>
+  <rect x="250" y="48" width="380" height="16" rx="2"
+        fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="250" y="48" width="380.0" height="16" rx="2"
+        fill="var(--accent)" opacity="0.45"/>
+  <text x="640" y="60" font-size="12.5"
+        font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink-soft)"
+        font-weight="400">100.0%</text>
+  <text x="238" y="94" text-anchor="end" font-size="12.5"
+        font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink-soft)"
+        font-weight="400">problem</text>
+  <rect x="250" y="82" width="380" height="16" rx="2"
+        fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="250" y="82" width="380.0" height="16" rx="2"
+        fill="var(--accent)" opacity="0.45"/>
+  <text x="640" y="94" font-size="12.5"
+        font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink-soft)"
+        font-weight="400">100.0%</text>
+  <text x="238" y="128" text-anchor="end" font-size="12.5"
+        font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink-soft)"
+        font-weight="400">root_cause</text>
+  <rect x="250" y="116" width="380" height="16" rx="2"
+        fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="250" y="116" width="378.5" height="16" rx="2"
+        fill="var(--accent)" opacity="0.45"/>
+  <text x="640" y="128" font-size="12.5"
+        font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink-soft)"
+        font-weight="400">99.6%</text>
+  <text x="238" y="162" text-anchor="end" font-size="12.5"
+        font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink)"
+        font-weight="700">solution</text>
+  <rect x="250" y="150" width="380" height="16" rx="2"
+        fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="250" y="150" width="290.3" height="16" rx="2"
+        fill="var(--accent)" opacity="0.95"/>
+  <text x="640" y="162" font-size="12.5"
+        font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink)"
+        font-weight="700">76.4%</text>
+  <text x="238" y="196" text-anchor="end" font-size="12.5"
+        font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink)"
+        font-weight="700">problem/solution_keywords</text>
+  <rect x="250" y="184" width="380" height="16" rx="2"
+        fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="250" y="184" width="182.0" height="16" rx="2"
+        fill="var(--accent)" opacity="0.95"/>
+  <text x="640" y="196" font-size="12.5"
+        font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink)"
+        font-weight="700">47.9%</text>
+  <text x="238" y="230" text-anchor="end" font-size="12.5"
+        font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink)"
+        font-weight="700">additional_info</text>
+  <rect x="250" y="218" width="380" height="16" rx="2"
+        fill="var(--surface)" stroke="var(--border)" stroke-width="1"/>
+  <rect x="250" y="218" width="152.8" height="16" rx="2"
+        fill="var(--accent)" opacity="0.95"/>
+  <text x="640" y="230" font-size="12.5"
+        font-family="ui-monospace,Menlo,monospace"
+        fill="var(--ink)"
+        font-weight="700">40.2%</text>
+  <text x="250" y="256" font-size="12" fill="var(--ink-soft)">
+    Fixed field order + fixed cutoff = the same fields lost from every long document
+  </text>
+</svg>
 
 `solution` is the row that matters. In roughly one document in four, **how the
 problem was actually fixed did not exist as far as vector search was concerned** —
