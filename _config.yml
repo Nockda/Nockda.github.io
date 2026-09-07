@@ -162,8 +162,11 @@ site-css:
 # Fill in your Google Analytics tag ID (or "Measurement ID") to track your website usage
 #gtag: "G-XXXXXXXXXX"
 
-# Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
-#cloudflare_analytics: ""
+# Cloudflare Web Analytics. Free, and it sets no cookies, so no consent banner
+# is needed for UK/EU visitors — which is why it is used here instead of GA4.
+# To switch on: dash.cloudflare.com -> Web Analytics -> Add a site
+# (nockda.github.io) -> copy the beacon token, paste below, uncomment.
+#cloudflare_analytics: "your-32-character-token"
 
 # Google Tag Manager ID
 #gtm: ""
