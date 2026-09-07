@@ -5,14 +5,9 @@ title: The silent failure mode in hybrid search
 subtitle: When one leg returns nothing, the results still look fine
 tags: [rag, llm, python]
 comments: true
+share-img: /assets/img/hybrid-search/share.png
 share-description: "Hybrid search fuses BM25 and vector rankings. If one leg quietly returns nothing, the output still looks correct. Here is how I found it in a 100,000-ticket index and fixed it."
 ---
-
-<!--
-  DRAFT 1 of 4. Jekyll ignores _drafts/.
-  SANITISED: no employer, no product names, no ticket keys, no ticket text,
-  no business metrics. The example query is invented.
--->
 
 Hybrid search is the standard recipe for retrieval now. BM25 for exact terms, vector
 KNN for meaning, the two rankings fused with reciprocal rank fusion. It is in every
@@ -160,11 +155,3 @@ Every leg of a fusion should report how much it contributed, because **zero is t
 interesting case** and it is the only one you cannot see from the output. If you are
 running hybrid search today and you have never looked at the per-leg counts on your
 longest queries, go and look. It takes a minute.
-
-<!--
-  TODO before publishing:
-    - [ ] read aloud, split anything you stumble on
-    - [ ] confirm 866 tokens and the code against the repo
-    - [ ] link post 2 once it exists
-    - [ ] move to _posts/YYYY-MM-DD-hybrid-search-silent-failure.md
--->
