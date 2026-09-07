@@ -31,8 +31,9 @@ afternoon.
 
 I did not do it, for two reasons.
 
-The first is speed. This runs on one 4 GB GPU. An LLM call in the search path adds
-seconds to every query. Search has to feel instant or people stop using it.
+The first is speed. An LLM call in the search path adds seconds to every query, and
+the GPU is shared with other services. Search has to feel instant or people stop using
+it.
 
 The second reason is the one that decided it. **An LLM asked to explain a match will
 always write a convincing explanation, whether or not it is the real one.** Give it a

@@ -22,11 +22,13 @@ problem. Here is what went wrong, and how I fixed it.
 
 ## The setup
 
-Everything runs on one RTX A1000 with **4 GB of VRAM**. That limit shaped the whole
-design:
+In production this runs on an **A100 with 80 GB of VRAM**. But I develop it on a
+laptop with an **RTX A1000 and 4 GB**, and I wanted the whole system to run there too.
+The tighter machine is what shaped the model choices:
 
 - **Gemma-4 E2B-it**, 4-bit nf4 quantised with bitsandbytes. It structures tickets and
-  reads image attachments.
+  reads image attachments. Quantising it keeps it inside 4 GB, and on the A100 it
+  leaves room for other services on the same card.
 - **multilingual-e5-large** for embeddings, 1024 dimensions
 - **Elasticsearch 9.x** for both the keyword index and the vectors
 
