@@ -24,7 +24,7 @@ I checked. I measured about a thousand tickets out of roughly 100,000:
 
 | | |
 | :--- | ---: |
-| Documents over 512 tokens | **805 of 1,064 — 75.7%** |
+| Documents over 512 tokens | **805 of 1,064, or 75.7%** |
 | Longest document | **2,410 tokens** |
 
 Three out of four were being cut. The longest was almost five times the limit.
@@ -33,8 +33,8 @@ Three out of four were being cut. The longest was almost five times the limit.
 
 This is what turns a small detail into a real problem.
 
-I built the embedding input by joining fields in a fixed order: title, problem, root
-cause, solution, keywords, extra notes. That seems fine. But a fixed order plus a
+I was building the embedding input by joining fields in a fixed order: title,
+problem, root cause, solution, keywords, extra notes. That seemed fine to me. But a fixed order plus a
 fixed cutoff means the cut always falls in the same spot. The damage is not spread
 around. **The same fields go missing from every long document.**
 
@@ -143,11 +143,11 @@ right default for a library. It is a trap if your documents are long.
 
 ## The fix: stop making one vector per document
 
-The usual answer is to chunk by length. Cut the text into 512-token pieces, embed each
-one, store them all.
+The usual answer is to chunk by length. Cut the text into 512-token pieces, embed
+each one, store them all. I did something narrower.
 
-I did something narrower, because these documents already have structure. Instead of
-chunking by length, I embed **by field**. One vector for `problem`, one for
+My documents already have structure, so instead of chunking by length I embed **by
+field**. One vector for `problem`, one for
 `root_cause`, one for `solution`. Each one fits under the limit on its own, so nothing
 is cut.
 

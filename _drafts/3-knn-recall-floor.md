@@ -5,18 +5,18 @@ title: Two max() calls gave my KNN the worst possible recall
 subtitle: num_candidates, k, and a one-line fix
 tags: [rag, python]
 comments: true
-share-description: "Elasticsearch KNN takes k and num_candidates. The ratio between them is the accuracy dial, and two ordinary-looking max() calls flattened mine to 1.0 — the lowest the engine allows."
+share-description: "Elasticsearch KNN takes k and num_candidates. The ratio between them is the accuracy dial, and two ordinary-looking max() calls flattened mine to 1.0, the lowest the engine allows."
 ---
 
 <!--
   DRAFT 3 of 4. SANITISED: no employer, no product names, no ticket data.
-  Short on purpose — one idea, one fix.
+  Short on purpose, one idea, one fix.
 -->
 
 Elasticsearch KNN takes two numbers that are easy to mix up:
 
-- **`k`** — how many results you want.
-- **`num_candidates`** — how many nodes HNSW looks at before picking those `k`.
+- **`k`** is how many results you want.
+- **`num_candidates`** is how many nodes HNSW looks at before picking those `k`.
 
 HNSW is an *approximate* search. It does not compare your query to every vector. It
 walks a graph and keeps the best candidates it finds on the way. `num_candidates` is
@@ -29,7 +29,7 @@ Elasticsearch allows, and the worst recall you can get.
 
 ## Two floors that ate the multipliers
 
-Here is the code. I think most reviewers would let it through:
+Here is what I had written. I think most reviewers would let it through:
 
 ```python
 "num_candidates": max(top_k * 10, 50),
@@ -106,7 +106,7 @@ The over-fetch only starts working at `top_k = 10` or higher. Nobody was using t
 The two busiest paths ran at the minimum.
 
 Here is the general lesson. When you clamp two related values on their own, **the
-relationship between them can disappear** — and here that relationship was the whole
+relationship between them can disappear**, and here that relationship was the whole
 point. A floor on one number is safe. A floor on both ends of a ratio is a bug waiting
 for a small input.
 
@@ -150,6 +150,6 @@ They are often not what you think.
 <!--
   TODO before publishing:
     - [ ] read aloud
-    - [ ] old values verified against git (commit 1ddab33^): max(top_k*10,50) / max(top_k*5,50) — confirmed
+    - [ ] old values verified against git (commit 1ddab33^): max(top_k*10,50) / max(top_k*5,50), confirmed
     - [ ] move to _posts/YYYY-MM-DD-knn-recall-floor.md
 -->

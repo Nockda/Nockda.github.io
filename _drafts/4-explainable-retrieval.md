@@ -5,7 +5,7 @@ title: Don't let an LLM explain your search results
 subtitle: Building search that shows its real reasons
 tags: [rag, llm, python]
 comments: true
-share-description: "People don't trust a search result they can't explain. I built the explanation from the ranking signals the search already had, not from an LLM — because an LLM writes a believable reason, not the real one."
+share-description: "People don't trust a search result they can't explain. I built the explanation from the ranking signals the search already had, not from an LLM, because an LLM writes a believable reason, not the real one."
 ---
 
 <!--
@@ -44,8 +44,8 @@ questions. Only one of them is true.
 
 An explanation that sounds right but describes reasoning the system never did is worse
 than no explanation. It teaches people to trust the system for the wrong reasons. And
-it fails exactly when they need it most — on the surprising results, which are the ones
-they came to check.
+it fails exactly when they need it most, on the surprising results, which are the
+ones they came to check.
 
 ## Explaining from signals you already have
 
@@ -63,8 +63,8 @@ ranker actually computed.
 
 One detail mattered more than I expected: stopwords. In an issue tracker, words like
 *error*, *issue*, *fail*, *problem* and *ticket* show up in almost every document.
-"Matched on: error, issue" is true and useless. Worse than useless — it makes the
-system look naive. So those words are filtered out of the explanation, even though
+"Matched on: error, issue" is true and useless. Worse than useless, because it makes
+the system look naive. So those words are filtered out of the explanation, even though
 they still count toward the score. What is left is the vocabulary that actually
 separates this ticket from the other 100,000.
 
