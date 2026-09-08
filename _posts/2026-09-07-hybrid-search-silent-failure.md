@@ -7,7 +7,7 @@ tags: [rag, llm, python]
 comments: true
 thumbnail-img: /assets/img/hybrid-search/taps.jpg
 share-img: /assets/img/hybrid-search/taps.jpg
-share-description: "Hybrid search merges BM25 and vector results. If one side returns nothing, the output still looks fine. How I found this in a 100,000-ticket search system and fixed it."
+share-description: "One shared threshold, two callers sending very different queries. BM25 went silent, the merged output still looked fine, and no alert fired. What broke and how to catch it."
 ---
 
 I built a search engine over our issue tracker. About 100,000 tickets. My colleagues
@@ -80,8 +80,10 @@ Then the second caller reused the same function with a completely different shap
 query, and nobody adjusted the threshold, because the threshold was not visible from
 there.
 
-For an 866-token query, `"30%"` matches nothing. Thirty percent of a 300-word query
-means a document has to share **90 words** before Elasticsearch will even look at it.
+For an 866-token query, `"30%"` matches nothing. That summary comes out at roughly
+300 unique terms once the analyser has finished with it, and `minimum_should_match`
+counts those terms. So a document had to share about **90 of them** before
+Elasticsearch would even consider it.
 
 <svg viewBox="0 0 720 350" role="img" width="100%"
      aria-label="Two rankings feed a reciprocal rank fusion step. The BM25 ranking is empty while the vector ranking has five results. The fused output still shows five ranked results, so the failure is invisible from the output."
@@ -130,7 +132,7 @@ means a document has to share **90 words** before Elasticsearch will even look a
   <text x="500" y="318" font-size="12.5" font-weight="700" fill="var(--ink)">looks completely normal</text>
 </svg>
 
-No document shares 90 words. So BM25 returns an empty list. RRF then merges one full
+Nothing shares 90 terms. So BM25 returns an empty list. RRF then merges one full
 ranking with one empty one. What comes out is plain vector search. It is still called
 hybrid.
 
@@ -165,24 +167,36 @@ def _min_should_match(query_text: str) -> str:
 ```
 
 The last line matters most. If you keep using a percentage, longer queries need more
-and more matching words. A 2,000-token query at 25% still needs hundreds of them. That
-is the same bug again with bigger numbers. At some length you have to stop using a
-ratio. Four good word matches in a very long query is already a strong signal.
+and more matching terms. A 2,000-token query at 25% still needs hundreds of them. That
+is the same bug again with bigger numbers. Past a certain length you have to drop the
+ratio for a fixed floor. Four solid term matches in a very long query is already a
+strong signal.
 
-Elasticsearch supports the `"2<-25%"` form directly. It means: with 2 words or fewer,
+Elasticsearch supports the `"2<-25%"` form directly. It means: with 2 terms or fewer,
 match all of them; above that, match 25%. It is in the docs, and I had never noticed
 it.
 
 ## How to check your own
 
-Add one line before you merge:
+The real lesson was not the threshold. It was that nobody was watching how many
+results each retriever returned.
+
+You asked each retriever for `k` results. Warn whenever one of them comes back with
+noticeably less than that:
 
 ```python
-logger.debug("bm25=%d knn=%d", len(bm25_hits), len(knn_hits))
+k = 50  # what you asked each retriever for
+
+for name, hits in (("bm25", bm25_hits), ("knn", knn_hits)):
+    if len(hits) < k * 0.5:
+        logger.warning("hybrid degraded: %s returned %d/%d", name, len(hits), k)
 ```
 
-Every leg should say how many results it returned. **Zero is the case you care
-about**, and it is the one you cannot see in the output.
+**Do not just check for zero.** Asking for 50 and getting 2 is already a collapsed
+hybrid, and neither case shows up in the output.
+
+In production, export the per-retriever hit counts as a metric rather than a log
+line. A warning that fires on every query gets ignored within a week.
 
 The other thing worth doing takes longer. Go through the tuned numbers in your
 retrieval code, and for each one write down which caller you had in mind when you
