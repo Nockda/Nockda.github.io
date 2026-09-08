@@ -5,7 +5,8 @@ title: The silent failure mode in hybrid search
 subtitle: When one leg returns nothing, the results still look fine
 tags: [rag, llm, python]
 comments: true
-share-img: /assets/img/hybrid-search/share.png
+thumbnail-img: /assets/img/hybrid-search/taps.jpg
+share-img: /assets/img/hybrid-search/taps.jpg
 share-description: "Hybrid search merges BM25 and vector results. If one side returns nothing, the output still looks fine. How I found this in a 100,000-ticket search system and fixed it."
 ---
 
