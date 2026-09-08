@@ -9,16 +9,28 @@ share-img: /assets/img/hybrid-search/share.png
 share-description: "Hybrid search merges BM25 and vector results. If one side returns nothing, the output still looks fine. How I found this in a 100,000-ticket search system and fixed it."
 ---
 
-Hybrid search is the standard way to do retrieval now. BM25 finds exact words. Vector
-KNN finds similar meaning. You run both, then merge the two rankings with reciprocal
-rank fusion (RRF). It is in every tutorial, and it works.
+An engineer hits an error. Before spending a day debugging it, they want to know
+whether someone already fixed this last year. So they search our issue tracker —
+about 100,000 tickets — and hope the right one comes back.
 
-But it can break in a way nothing warns you about. **One of the two legs can return
-nothing, and the merged result still looks fine.**
+That search has two halves, and they do different jobs:
 
-I hit this in a search system I built over an internal issue tracker. About 100,000
-tickets. Engineers use it to find the ticket where someone already fixed the same
-problem. Here is what went wrong, and how I fixed it.
+- **BM25** matches exact words. It is what finds the ticket that contains the same
+  error string, the same version number, the same component name.
+- **Vector KNN** matches meaning. It is what finds the ticket describing the same
+  problem in completely different words.
+
+You run both, merge the two rankings with reciprocal rank fusion (RRF), and show one
+list. That is the standard recipe, and it works well.
+
+Then I went through the search code line by line, and found that on the busiest path
+BM25 was returning **zero results**. Not fewer results. Zero, every time.
+
+So half the system was switched off. The half that matches exact strings — the half
+you rely on when you paste in an error code — had not been contributing anything.
+
+And nothing said so. The results page was full. The scores looked normal. No error,
+no empty state, no alert.
 
 ## The setup
 
@@ -106,19 +118,19 @@ hybrid.
 
 ## Why this is worth knowing
 
-The threshold is not the interesting part. What matters is how this looks from
-outside.
+The threshold is not the interesting part. What matters is why this can run for
+months without anyone noticing.
 
-The results page is full. The scores look normal. The results are even useful, because
-vector search on its own is not bad search. But it stops finding the things BM25 is
-there for: an exact error string, a version number, a component name. The embedding
-blurs those into similar-looking words.
+Vector search on its own is not bad search. It is decent search. So the results stayed
+useful enough that nothing felt wrong. They were simply missing the ticket that named
+the exact error — and nobody can tell you about a result they never saw.
 
-**A hybrid system with one dead leg looks the same as a healthy one.** No error. No
-empty page. No change in speed. All the usual alerts stay green.
+**A hybrid system with one dead leg looks the same as a healthy one.** Same shape of
+output, same speed, same green dashboards.
 
-If a component returns junk, you notice. If it returns nothing, you do not. Its weight
-just moves to whatever else is in the merge.
+If a component returns junk, you notice straight away. If it returns nothing, you
+never do. Its weight quietly moves to whatever else is in the merge, and the merge
+carries on working.
 
 ## The fix
 
