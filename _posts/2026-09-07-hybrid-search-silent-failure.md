@@ -27,8 +27,8 @@ and show one list. Standard recipe, and it works well.
 Then I went through my search code line by line, and found that on the busiest path
 BM25 was returning **zero results**. Not fewer results. Zero, every time.
 
-So half of my own system was switched off. The half that matches exact strings, the
-half you rely on when you paste in an error code, had not been contributing anything.
+So half the system was switched off. The half that matches exact strings, the half
+you rely on when you paste in an error code, had not been contributing anything.
 
 And nothing told me. The results page was full. The scores looked normal. No error,
 no empty state, no alert.
@@ -62,6 +62,11 @@ Now look at the BM25 setting I had written. It looks completely normal:
 ```
 
 For a query like "login fails after update" it is right. Six words, two must match.
+
+This is not an exotic setting. `30%` is the kind of value you find in most examples,
+and it is correct in almost every system, because almost every query is short. It only
+turns into a bug when something starts sending very long queries. Which is exactly
+what my ticket-upload path does.
 
 For an 866-token query it matches nothing. `"30%"` of a 300-word query means a
 document must share **90 words** before Elasticsearch will even look at it.
