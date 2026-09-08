@@ -86,12 +86,15 @@ social-network-links:
 # --- General options --- #
 ###########################
 
-# Select which social network share links to show in posts
-share-links-active:
-  github: true
-  twitter: true
-  linkedin: true
-  vk: false
+# Which share buttons to show under a post. Inert unless `social-share` is true
+# in the defaults at the bottom of this file, which it is not.
+# (`github` was never a real option here; the include only supports the five below.)
+#share-links-active:
+#  facebook: true
+#  twitter: true
+#  linkedin: true
+#  reddit: true
+#  vk: false
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
@@ -285,7 +288,7 @@ defaults:
     values:
       layout: "post"
       comments: true # add comments to all blog posts
-      social-share: true # add social media sharing buttons to all blog posts
+      social-share: false # share buttons under each post; set true to bring them back
   - scope:
       path: "" # any file that's not a post will be a "page" layout by default
     values:
