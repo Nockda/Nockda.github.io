@@ -166,7 +166,7 @@ site-css:
 # is needed for UK/EU visitors — which is why it is used here instead of GA4.
 # To switch on: dash.cloudflare.com -> Web Analytics -> Add a site
 # (nockda.github.io) -> copy the beacon token, paste below, uncomment.
-cloudflare_analytics: "33912bedd6774c0494a24fedbe369f4b"
+cloudflare_analytics: "972e6d1fc6e24b85911c2997a95e1f4b"
 
 # Google Tag Manager ID
 #gtm: ""
