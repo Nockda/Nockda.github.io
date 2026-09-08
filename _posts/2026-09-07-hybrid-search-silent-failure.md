@@ -49,27 +49,39 @@ When a ticket comes in, the model splits it into fields: problem, root cause,
 solution, keywords. When someone searches, BM25 and vector KNN both run, and RRF
 merges what they return.
 
-## The trap: long queries
+## One function, two very different queries
 
-One of my search paths does not use a short phrase. You upload a ticket, the model
-summarises it, and I use that whole summary as the query. Those summaries are long.
-The median is **866 tokens**.
+I have one search function. Two places call it.
 
-Now look at the BM25 setting I had written. It looks completely normal:
+```python
+# someone types into the search box
+query_text = f"{request.title} {request.description}"
+
+# someone uploads a ticket, and the model summarises it first
+query_text = summary["embedding_text"]
+```
+
+The first one is a handful of words. The second is a whole model-written summary, and
+those are long. The median is **866 tokens**.
+
+Both go through the same BM25 query, with the same threshold in it:
 
 ```python
 "minimum_should_match": "30%"
 ```
 
-For a query like "login fails after update" it is right. Six words, two must match.
+Now, why 30%? Because I wrote that line while I was thinking about the first caller.
+For "login fails after update" it is exactly right: six words, at least two must
+match. It is also the value you see in most Elasticsearch examples, next to the same
+`title^3`, `problem^2` field boosts I had copied along with it. For a search box it is
+a sensible default and I had no reason to look at it again.
 
-This is not an exotic setting. `30%` is the kind of value you find in most examples,
-and it is correct in almost every system, because almost every query is short. It only
-turns into a bug when something starts sending very long queries. Which is exactly
-what my ticket-upload path does.
+Then the second caller reused the same function with a completely different shape of
+query, and nobody adjusted the threshold, because the threshold was not visible from
+there.
 
-For an 866-token query it matches nothing. `"30%"` of a 300-word query means a
-document must share **90 words** before Elasticsearch will even look at it.
+For an 866-token query, `"30%"` matches nothing. Thirty percent of a 300-word query
+means a document has to share **90 words** before Elasticsearch will even look at it.
 
 <svg viewBox="0 0 720 350" role="img" width="100%"
      aria-label="Two rankings feed a reciprocal rank fusion step. The BM25 ranking is empty while the vector ranking has five results. The fused output still shows five ranked results, so the failure is invisible from the output."
@@ -172,5 +184,10 @@ logger.debug("bm25=%d knn=%d", len(bm25_hits), len(knn_hits))
 Every leg should say how many results it returned. **Zero is the case you care
 about**, and it is the one you cannot see in the output.
 
-If you run hybrid search and have never checked these counts on your longest queries,
-go and look. It takes a minute.
+The other thing worth doing takes longer. Go through the tuned numbers in your
+retrieval code, and for each one write down which caller you had in mind when you
+picked it. Then list everything that calls it now. Anywhere those two lists disagree
+is a number that has quietly stopped meaning what you meant.
+
+Mine was a threshold. It could just as easily be a `top_k`, a chunk size, or a
+similarity cutoff.
